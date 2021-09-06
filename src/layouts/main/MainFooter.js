@@ -38,8 +38,8 @@ const LINKS = [
   {
     headline: 'Contact Us',
     children: [
-      { name: 'support@minimals.cc', href: '#' },
-      { name: 'Los Angeles, 359  Hidden Valley Road', href: '#' }
+      { name: 'hello@irekommend.com', href: '#' },
+      { name: '6064 Cloverdale Dr Tega Cay South Carolina United States - 29708', href: '#' }
     ]
   }
 ];
@@ -51,10 +51,10 @@ const RootStyle = styled('div')(({ theme }) => ({
 
 const useStylesEmailInput = makeStyles((theme) => ({
   root: {
-    height: 60,
+    height: 50,
     border: '1px solid #e2e2e1',
     overflow: 'hidden',
-    borderRadius: "20px 0 0 20px",
+    borderRadius: "10px 0 0 10px",
     backgroundColor: '#fcfcfb',
     transition: theme.transitions.create(['border-color', 'box-shadow']),
     '&:hover': {
@@ -71,7 +71,7 @@ const useStylesEmailInput = makeStyles((theme) => ({
 
 const useStyles = makeStyles((theme) => ({
   button: {
-    height: 60,
+    height: 50,
     maxWidth: 150,
     width: "100%",
     justifyContent: 'flex-start',
@@ -132,11 +132,11 @@ export default function MainFooter() {
           </Grid>
           <Grid item xs={8} md={3}>
             <Typography variant="body2" sx={{ pr: { md: 5 } }}>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.
+            We want to bring AI into the recruitment platform so that it can simplify the task of jobseekers and recruiters
             </Typography>
           </Grid>
 
-          <Grid item xs={12} md={4} >
+          <Grid item xs={12} md={6} >
             <Stack spacing={5} direction={{ xs: 'column', md: 'row' }} justifyContent="space-between">
               {LINKS.map((list) => {
                 const { headline, children } = list;

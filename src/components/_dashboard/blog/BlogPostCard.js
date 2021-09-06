@@ -1,66 +1,74 @@
-import PropTypes from 'prop-types';
-import { Icon } from '@iconify/react';
-import { paramCase } from 'change-case';
-import eyeFill from '@iconify/icons-eva/eye-fill';
-import { Link as RouterLink } from 'react-router-dom';
-import shareFill from '@iconify/icons-eva/share-fill';
-import messageCircleFill from '@iconify/icons-eva/message-circle-fill';
+import PropTypes from "prop-types";
+import { Icon } from "@iconify/react";
+import { paramCase } from "change-case";
+import eyeFill from "@iconify/icons-eva/eye-fill";
+import { Link as RouterLink } from "react-router-dom";
+import shareFill from "@iconify/icons-eva/share-fill";
+import messageCircleFill from "@iconify/icons-eva/message-circle-fill";
 // material
-import { alpha, experimentalStyled as styled } from '@material-ui/core/styles';
-import { Box, Link, Card, Grid, Avatar, Typography, CardContent } from '@material-ui/core';
+import { alpha, experimentalStyled as styled } from "@material-ui/core/styles";
+import {
+  Box,
+  Link,
+  Card,
+  Grid,
+  Avatar,
+  Typography,
+  CardContent,
+} from "@material-ui/core";
 // routes
-import { PATH_DASHBOARD } from '../../../routes/paths';
+import { PATH_DASHBOARD } from "../../../routes/paths";
 // utils
-import { fDate } from '../../../utils/formatTime';
-import { fShortenNumber } from '../../../utils/formatNumber';
+import { fDate } from "../../../utils/formatTime";
+import { fShortenNumber } from "../../../utils/formatNumber";
 //
-import SvgIconStyle from '../../SvgIconStyle';
+import SvgIconStyle from "../../SvgIconStyle";
 
 // ----------------------------------------------------------------------
 
-const CardMediaStyle = styled('div')({
-  position: 'relative',
-  paddingTop: 'calc(100% * 3 / 4)'
+const CardMediaStyle = styled("div")({
+  position: "relative",
+  paddingTop: "calc(100% * 3 / 4)",
 });
 
 const TitleStyle = styled(Link)({
   height: 44,
-  overflow: 'hidden',
+  overflow: "hidden",
   WebkitLineClamp: 2,
-  display: '-webkit-box',
-  WebkitBoxOrient: 'vertical'
+  display: "-webkit-box",
+  WebkitBoxOrient: "vertical",
 });
 
 const AvatarStyle = styled(Avatar)(({ theme }) => ({
   zIndex: 9,
   width: 32,
   height: 32,
-  position: 'absolute',
+  position: "absolute",
   left: theme.spacing(3),
-  bottom: theme.spacing(-2)
+  bottom: theme.spacing(-2),
 }));
 
-const InfoStyle = styled('div')(({ theme }) => ({
-  display: 'flex',
-  flexWrap: 'wrap',
-  justifyContent: 'flex-end',
+const InfoStyle = styled("div")(({ theme }) => ({
+  display: "flex",
+  flexWrap: "wrap",
+  justifyContent: "flex-end",
   marginTop: theme.spacing(3),
-  color: theme.palette.text.disabled
+  color: theme.palette.text.disabled,
 }));
 
-const CoverImgStyle = styled('img')({
+const CoverImgStyle = styled("img")({
   top: 0,
-  width: '100%',
-  height: '100%',
-  objectFit: 'cover',
-  position: 'absolute'
+  width: "100%",
+  height: "100%",
+  objectFit: "contain",
+  position: "absolute",
 });
 
 // ----------------------------------------------------------------------
 
 BlogPostCard.propTypes = {
   post: PropTypes.object.isRequired,
-  index: PropTypes.number
+  index: PropTypes.number,
 };
 
 export default function BlogPostCard({ post, index }) {
@@ -72,32 +80,39 @@ export default function BlogPostCard({ post, index }) {
   const POST_INFO = [
     { number: comment, icon: messageCircleFill },
     { number: view, icon: eyeFill },
-    { number: share, icon: shareFill }
+    { number: share, icon: shareFill },
   ];
 
   return (
-    <Grid item xs={12} sm={latestPostLarge ? 12 : 6} md={latestPostLarge ? 6 : 3}>
-      <Card sx={{ position: 'relative' }}>
+    <Grid
+      item
+      xs={12}
+      sm={latestPostLarge ? 6 : 6}
+      md={latestPostLarge ? 3 : 3}
+    >
+      <Card sx={{ position: "relative" }}>
         <CardMediaStyle
-          sx={{
-            ...((latestPostLarge || latestPost) && {
-              pt: 'calc(100% * 4 / 3)',
-              '&:after': {
-                top: 0,
-                content: "''",
-                width: '100%',
-                height: '100%',
-                position: 'absolute',
-                bgcolor: (theme) => alpha(theme.palette.grey[900], 0.72)
-              }
-            }),
-            ...(latestPostLarge && {
-              pt: {
-                xs: 'calc(100% * 4 / 3)',
-                sm: 'calc(100% * 3 / 4.66)'
-              }
-            })
-          }}
+          sx={
+            {
+              // ...((latestPostLarge || latestPost) && {
+              //   pt: 'calc(100% * 4 / 3)',
+              //   '&:after': {
+              //     top: 0,
+              //     content: "''",
+              //     width: '100%',
+              //     height: '100%',
+              //     position: 'absolute',
+              //     bgcolor: (theme) => alpha(theme.palette.grey[900], 0.72)
+              //   }
+              // }),
+              // ...(latestPostLarge && {
+              //   pt: {
+              //     xs: 'calc(100% * 4 / 3)',
+              //     sm: 'calc(100% * 3 / 4.66)'
+              //   }
+              // })
+            }
+          }
         >
           <SvgIconStyle
             color="paper"
@@ -107,11 +122,11 @@ export default function BlogPostCard({ post, index }) {
               height: 36,
               zIndex: 9,
               bottom: -15,
-              position: 'absolute',
-              ...((latestPostLarge || latestPost) && { display: 'none' })
+              position: "absolute",
+              // ...((latestPostLarge || latestPost) && { display: 'none' })
             }}
           />
-          <AvatarStyle
+          {/* <AvatarStyle
             alt={author.name}
             src={author.avatarUrl}
             sx={{
@@ -123,7 +138,7 @@ export default function BlogPostCard({ post, index }) {
                 height: 40
               })
             }}
-          />
+          /> */}
 
           <CoverImgStyle alt={title} src={cover} />
         </CardMediaStyle>
@@ -131,14 +146,18 @@ export default function BlogPostCard({ post, index }) {
         <CardContent
           sx={{
             pt: 4,
-            ...((latestPostLarge || latestPost) && {
-              bottom: 0,
-              width: '100%',
-              position: 'absolute'
-            })
+            // ...((latestPostLarge || latestPost) && {
+            //   bottom: 0,
+            //   width: '100%',
+            //   position: 'absolute'
+            // })
           }}
         >
-          <Typography gutterBottom variant="caption" sx={{ color: 'text.disabled', display: 'block' }}>
+          <Typography
+            gutterBottom
+            variant="caption"
+            sx={{ color: "text.disabled", display: "block" }}
+          >
             {fDate(createdAt)}
           </Typography>
 
@@ -147,12 +166,12 @@ export default function BlogPostCard({ post, index }) {
             color="inherit"
             variant="subtitle2"
             component={RouterLink}
-            sx={{
-              ...(latestPostLarge && { typography: 'h5', height: 60 }),
-              ...((latestPostLarge || latestPost) && {
-                color: 'common.white'
-              })
-            }}
+            // sx={{
+            //   ...(latestPostLarge && { typography: 'h5', height: 60 }),
+            //   ...((latestPostLarge || latestPost) && {
+            //     color: 'common.white'
+            //   })
+            // }}
           >
             {title}
           </TitleStyle>
@@ -162,16 +181,22 @@ export default function BlogPostCard({ post, index }) {
               <Box
                 key={index}
                 sx={{
-                  display: 'flex',
-                  alignItems: 'center',
+                  display: "flex",
+                  alignItems: "center",
                   ml: index === 0 ? 0 : 1.5,
-                  ...((latestPostLarge || latestPost) && {
-                    color: 'grey.500'
-                  })
+                  // ...((latestPostLarge || latestPost) && {
+                  //   color: 'grey.500'
+                  // })
                 }}
               >
-                <Box component={Icon} icon={info.icon} sx={{ width: 16, height: 16, mr: 0.5 }} />
-                <Typography variant="caption">{fShortenNumber(info.number)}</Typography>
+                <Box
+                  component={Icon}
+                  icon={info.icon}
+                  sx={{ width: 16, height: 16, mr: 0.5 }}
+                />
+                <Typography variant="caption">
+                  {fShortenNumber(info.number)}
+                </Typography>
               </Box>
             ))}
           </InfoStyle>

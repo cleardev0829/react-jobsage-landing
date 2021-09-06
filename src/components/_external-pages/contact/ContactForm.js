@@ -11,7 +11,7 @@ export default function ContactForm() {
       <MotionInView variants={varFadeInUp}>
         <Typography variant="h3">
           Feel free to contact us. <br />
-          We'll be glad to hear from you, buddy.
+          We'll be glad to hear from you.
         </Typography>
       </MotionInView>
 
@@ -25,7 +25,7 @@ export default function ContactForm() {
         </MotionInView>
 
         <MotionInView variants={varFadeInUp}>
-          <TextField fullWidth label="Subject" />
+          <TextField fullWidth label="Phone Number" />
         </MotionInView>
 
         <MotionInView variants={varFadeInUp}>

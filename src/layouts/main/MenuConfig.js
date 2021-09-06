@@ -27,7 +27,7 @@ const menuConfig = [
   {
     title: 'Resume builder',
     icon: <Icon icon={bookOpenFill} {...ICON_SIZE} />,
-    path: '/resume-builder'
+    path: PATH_PAGE.resumeBuilder
   },
   {
     title: 'Company',
@@ -37,7 +37,7 @@ const menuConfig = [
       {
         subheader: 'Company',
         items: [
-          { title: 'About us', path: PATH_PAGE.about },      
+          // { title: 'About us', path: PATH_PAGE.about },      
           { title: 'Blog', path: PATH_PAGE.blog},       
         ]
       }
@@ -51,7 +51,7 @@ const menuConfig = [
       {
         subheader: 'Feature',
         items: [
-          { title: 'Resume Parsing', path: "PATH_PAGE.about" },         
+          { title: 'Resume Parsing', path: PATH_PAGE.resumeParsing },         
         ]
       }
     ]

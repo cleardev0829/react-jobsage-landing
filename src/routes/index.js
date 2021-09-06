@@ -174,6 +174,7 @@ export default function Router() {
         { path: 'about-us', element: <About /> },
         { path: 'blog', element: <Blog /> },
         { path: 'resume-builder', element: <ResumeBuilder /> },
+        { path: 'resume-parsing', element: <ResumeParsing /> },
         { path: 'contact-us', element: <Contact /> },
         { path: 'faqs', element: <Faqs /> },
         {
@@ -273,6 +274,7 @@ const LandingPage = Loadable(lazy(() => import('../pages/LandingPage')));
 const About = Loadable(lazy(() => import('../pages/About')));
 const Blog = Loadable(lazy(() => import('../pages/Blog')));
 const ResumeBuilder = Loadable(lazy(() => import('../pages/ResumeBuilder')));
+const ResumeParsing = Loadable(lazy(() => import('../pages/ResumeParsing')));
 const Contact = Loadable(lazy(() => import('../pages/Contact')));
 const Faqs = Loadable(lazy(() => import('../pages/Faqs')));
 const ComingSoon = Loadable(lazy(() => import('../pages/ComingSoon')));

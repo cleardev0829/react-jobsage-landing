@@ -29,6 +29,7 @@ export const PATH_PAGE = {
   blog: '/blog',
   demo: '/demo',
   resumeBuilder: '/resume-builder',
+  resumeParsing: '/resume-parsing',
   contact: '/contact-us',
   faqs: '/faqs',
   page404: '/404',

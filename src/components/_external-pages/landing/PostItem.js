@@ -80,7 +80,7 @@ export default function PostItem(props) {
     <RootStyle>
       <Container maxWidth="lg">
         {title && (
-          <Grid container spacing={5} justifyContent="center" sx={{mb: 6}}>
+          <Grid container spacing={5} justifyContent="center" sx={{ mb: 6 }}>
             <Typography variant="h3" color="primary">
               {title}
             </Typography>
@@ -104,13 +104,18 @@ export default function PostItem(props) {
           >
             <ContentStyle>
               <MotionInView variants={varFadeInUp}>
-                <Typography variant="h3">
+                <Typography variant="h3" color="primary">
                   {prefix && `${prefix} `}
-                  <span style={{ fontWeight: 400 }}>{suffix}</span>
+                  {suffix && <span style={{ fontWeight: 400 }}>{suffix}</span>}
                 </Typography>
-                <MHidden width="mdDown">
-                  <Divider color="primary" sx={{ width: 70, height: 2, my: 4 }} />
-                </MHidden>
+                {prefix && (
+                  <MHidden width="mdDown">
+                    <Divider
+                      color="primary"
+                      sx={{ width: 70, height: 2, my: 4 }}
+                    />
+                  </MHidden>
+                )}
               </MotionInView>
               {description.map((item, index) => (
                 <MotionInView variants={varFadeInUp}>
@@ -125,8 +130,7 @@ export default function PostItem(props) {
                       <>
                         <span style={{ fontWeight: "bold" }}>
                           {item.prefix}
-                        </span>
-                        {` - `}
+                        </span>                       
                       </>
                     )}
                     {item.iconBullet ? (
@@ -136,8 +140,10 @@ export default function PostItem(props) {
                           {item.suffix}
                         </ListItem>
                       </Grid>
-                    ) : (
+                    ) : item.suffix ? (
                       item.suffix
+                    ) : (
+                      ""
                     )}
                   </Typography>
                 </MotionInView>

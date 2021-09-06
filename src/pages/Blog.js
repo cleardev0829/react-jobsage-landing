@@ -136,7 +136,7 @@ export default function BlogPosts() {
           style={{ overflow: "inherit" }}
         >
           <Grid container spacing={3}>
-            {sortedPosts.map((post, index) => (
+            {sortedPosts.splice(0, 4).map((post, index) => (
               <BlogPostCard key={post.id} post={post} index={index} />
             ))}
           </Grid>

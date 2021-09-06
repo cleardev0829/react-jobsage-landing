@@ -1,5 +1,6 @@
 // material
 import { experimentalStyled as styled } from "@material-ui/core/styles";
+import { AboutTeam, ContactUsWithMap } from "src/components/_external-pages/about";
 // components
 import Page from "../components/Page";
 import { LandingHero, PostItem } from "../components/_external-pages/landing";
@@ -23,11 +24,11 @@ const data = {
     description: [
       {
         suffix:
-          "IRekommend is an end-to-end recruitment solution which reimagines the way you recruit Right side Pic : Use Manatal Pic with a variation",
+          "IRekommend is an end-to-end recruitment solution that reimagines the way you recruit with a focus on candidate experience.",
       },
     ],
     buttonTitle: "Start your free trial",
-    imageUrl: "/static/home/pc1.svg",
+    imageUrl: "/static/home/Reimagine Recruitment.png",
     direction: true,
   },
   our: {
@@ -35,12 +36,12 @@ const data = {
     suffix: "skill suit include",
     description: [
       {
-        prefix: "Intelligent Hiring",
+        prefix: "Intelligent Hiring - ",
         suffix:
-          "Hire through thousands of candidates wisely brought through our high-powered AI With our AI Powered Matching engine You will never fail to get quality candidates with automated resume matching.",
+          "With our AI Powered Matching engine, you will never fail to get quality candidates with automated resume matching. Our Intelligent Hiring software has streamlined the hiring process and brought through thousands of qualified applicants for your review!",
       },
     ],
-    imageUrl: "/static/home/pc3.svg",
+    imageUrl: "/static/home/Our Skill suite include.png",
     direction: false,
   },
   candidate: {
@@ -48,10 +49,10 @@ const data = {
     suffix: "Engagement",
     description: [
       {
-        suffix: "Use our AI Chatbots to upgrade your candidate screening & engagements, use bulk emailing to Schedule & Reschedule your interviews."
+        suffix: "Leverage our AI Chatbots to upgrade your candidate screening & engagements, schedule and reschedule interviews with bulk emailing."
       }
     ],
-    imageUrl: "/static/home/pc3.svg",
+    imageUrl: "/static/home/Candidate Engagement.png",
     direction: true,
   },
   resume: {
@@ -59,10 +60,20 @@ const data = {
     suffix: "Parsing",
     description: [
       {
-        suffix: "Use our resume parser to extract candidate persona With our deep learning module you can extract complex personas in no time"
+        suffix: "Our resume parser extracts complex personas in no time. With our deep learning module, you can extract candidate persona with ease and finesse--all for a low price!"
       }
     ],      
-    imageUrl: "/static/home/pc3.svg",
+    imageUrl: "/static/home/Resume parsing.png",
+    direction: false,
+  },
+  founder: {
+    title: "Founder Details",   
+    description: [
+      {
+        prefix: "Arvind has over 16 years of product management experience, having launched and implemented a range of tech products for enterprises. Arvind holds the Top Innovator Award from TATA Group as well as the prestigious Young Manager Award from MMA (Mumbai Management Association)."
+      }
+    ],      
+    imageUrl: "/static/home/Arvind Radhakrishnen.jpg",
     direction: false,
   },
 };
@@ -78,6 +89,9 @@ export default function LandingPage() {
         <PostItem {...data.our} />
         <PostItem {...data.candidate} />
         <PostItem {...data.resume} />
+        <PostItem {...data.founder} />
+        <AboutTeam />
+        <ContactUsWithMap />
       </ContentStyle>
     </RootStyle>
   );
