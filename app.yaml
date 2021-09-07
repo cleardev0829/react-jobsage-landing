@@ -1,4 +1,6 @@
-runtime: nodejs16
+//app.yaml
+
+runtime: nodejs10
 handlers:
   - url: /
     static_files: build/index.html

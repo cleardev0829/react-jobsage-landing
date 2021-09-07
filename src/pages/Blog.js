@@ -51,6 +51,11 @@ const applySort = (posts, sortBy) => {
   return posts;
 };
 
+// accell: https://drive.google.com/file/d/1U01igxUTKka4XOlUb2IBD6luFPx_1kit/view?usp=sharing
+// cogni:  https://drive.google.com/file/d/1vUeqE_jMkBFUo2qfNa6g2TW1p3cj0g8c/view?usp=sharing
+// how ai: https://drive.google.com/file/d/1IvnQ44QjUxZb8f9ycbqD8xUEw9-OBYY1/view?usp=sharing
+// workfo: https://drive.google.com/file/d/1EqRgm57mYASW7dILs5WkXm432b0JvtYP/view?usp=sharing
+
 const SkeletonLoad = (
   <Grid container spacing={3} sx={{ mt: 2 }}>
     {[...Array(4)].map((_, index) => (
