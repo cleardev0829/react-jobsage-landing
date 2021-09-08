@@ -22,7 +22,7 @@ const menuConfig = [
   {
     title: 'Upload resume',
     icon: <Icon icon={roundGrain} {...ICON_SIZE} />,
-    path: '/upload-resume'
+    path: PATH_PAGE.resumeUpload
   },
   {
     title: 'Resume builder',
@@ -37,8 +37,10 @@ const menuConfig = [
       {
         subheader: 'Company',
         items: [
-          // { title: 'About us', path: PATH_PAGE.about },      
+          { title: 'About us', path: PATH_PAGE.about },      
           { title: 'Blog', path: PATH_PAGE.blog},       
+          { title: 'Privacy Policy', path: PATH_PAGE.privacyPolicy},       
+          { title: 'Terms and Conditions', path: PATH_PAGE.termsConditions},      
         ]
       }
     ]
@@ -51,7 +53,11 @@ const menuConfig = [
       {
         subheader: 'Feature',
         items: [
+          { title: 'Recruitment Solution', path: PATH_PAGE.recruitmentSolution },         
           { title: 'Resume Parsing', path: PATH_PAGE.resumeParsing },         
+          { title: 'Resume Builder', path: PATH_PAGE.resumeBuilder },         
+          { title: 'Candidate Sourcing', path: PATH_PAGE.candidateSourcing },      
+          { title: 'Rekommendation', path: PATH_PAGE.rekommendation },      
         ]
       }
     ]

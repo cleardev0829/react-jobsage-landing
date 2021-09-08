@@ -75,7 +75,7 @@ export default function AboutTeam() {
   return (
     <RootStyle>
       <MotionInView variants={varFadeInUp}>
-        <Typography variant="h3">
+        <Typography variant="h3" color="primary">
           {`Contact `}
           <span style={{ fontWeight: 400 }}>Us</span>
         </Typography>
@@ -87,7 +87,7 @@ export default function AboutTeam() {
             <MemberCard
               member={{
                 name: "EMAIL ADDRESS",
-                value: "arvindtadhakrishnen@irekommend.com",
+                value: "hello@irekommend.com",
                 icon: "/static/about/contact-email.svg",
               }}
             />
@@ -99,7 +99,7 @@ export default function AboutTeam() {
             <MemberCard
               member={{
                 name: "Company Details",
-                value: "NAme : SimplyAI LLC",
+                value: "Name : SimplyAI LLC",
                 icon: "/static/about/contact-company.svg",
               }}
             />

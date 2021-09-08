@@ -18,22 +18,21 @@ const RootStyle = styled(Page)(({ theme }) => ({
 
 const data = {
   item: {
-    prefix: "Automate Your Resume workflows with AI",
+    prefix: "Where AI reads resumes like humans",
     description: [
       {
-        prefix: "IRekommend's ",
         suffix:
-          "s AI solutions work with your existing systems — extracting maximum value from your documents with minimum efforts. ",
+          "Unmatched Speed, Accuracy & Stability of our AI for recommending Candidates for you IRekommend' s AI deep learning Engine reads resumes as humans with career Persona not just a string of keywords. We've modeled our Machine learning model to think like a recruiting human. With our AI the human bias is completely removed  and it makes recruitment process so simple and standard, with our Job and Candidate Matching AI, you can complete your heaviest of recruitment tasks in minutes.",
       },
     ],
-    imageUrl: "/static/resume-parsing/resume_parsing.svg",
+    imageUrl: "/static/rekommendation/rekommendation.svg",
     buttonTitle: 'Free Trial',
     direction: true,
   },  
 };
 // ----------------------------------------------------------------------
 
-export default function ResumeParsing() {
+export default function Rekommendation() {
   return (
     <RootStyle title="About us | Minimal-UI">    
       <PostItem {...data.item} />

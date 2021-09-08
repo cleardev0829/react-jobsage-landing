@@ -152,7 +152,7 @@ export default function PostItem(props) {
               {buttonTitle && (
                 <MotionInView variants={varFadeInUp}>
                   <Button
-                    size="large"
+                    size="middle"
                     color="primary"
                     variant="contained"
                     sx={{ borderRadius: 50 }}

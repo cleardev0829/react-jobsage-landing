@@ -20,7 +20,7 @@ const RootStyle = styled(Page)(({ theme }) => ({
 
 // ----------------------------------------------------------------------
 
-export default function About() {
+export default function ResumeBuilder() {
   return (
     <RootStyle title="About us | Minimal-UI">
       <PostItem
@@ -31,7 +31,7 @@ export default function About() {
               "With high competition in the job market, a Candidate needs all the gears to land the job role they want. IRekommend offers all the tools to help you build a compelling Resume that will get you noticed by employers.",
           },
         ]}
-        buttonTitle="Build My  Resume"
+        buttonTitle="Build your Resume"
         imageUrl="/static/resume-builder/resume.svg"
         direction={true}
       />   

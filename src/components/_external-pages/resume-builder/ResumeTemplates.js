@@ -68,12 +68,28 @@ function ResumeCard({ member }) {
   const { name, avatar } = member;
   return (
     // <Card key={name} sx={{mx: 1.5 }}>
-    <Box component="img" src={avatar} sx={{ width: "100%", borderRadius: 1 }} />
+    // <Box component="img" src={avatar} sx={{ width: "100%", borderRadius: 1 }} />
     // </Card>
+
+    <Card key={name} sx={{ p: 1, mx: 1.5 }}>
+      <Typography variant="subtitle1" sx={{ mt: 2, mb: 0.5 }}>
+        {name}
+      </Typography>     
+      <Box
+        component="img"
+        src={avatar}
+        sx={{ width: "100%", borderRadius: 1.5 }}
+      />
+        <Box sx={{ mt: 1, mb: 1 }}>
+        <Button  variant="contained">
+          Use this template
+        </Button>
+      </Box>
+    </Card>
   );
 }
 
-export default function ResumeBuilder() {
+export default function ResumeTemplates() {
   const carouselRef = useRef();
   const theme = useTheme();
 
@@ -115,9 +131,9 @@ export default function ResumeBuilder() {
             Create an Effective Resume in a Matter of Minutes
           </Typography>
         </Grid>
-        <Grid item xs={7} sx={{ margin: "auto", mb: 5, textAlign: 'left' }}>
+        <Grid item xs={7} sx={{ margin: "auto", mb: 5, textAlign: "left" }}>
           <Typography
-            variant="subtitle1"
+            // variant="h3"
             sx={{
               color: "text.secondary",
             }}

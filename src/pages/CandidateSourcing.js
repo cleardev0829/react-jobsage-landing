@@ -1,8 +1,14 @@
 // material
 import { experimentalStyled as styled } from "@material-ui/core/styles";
+import { Divider } from "@material-ui/core";
 // components
 import Page from "../components/Page";
 import {
+  AboutHero,
+  AboutWhat,
+  AboutTeam,
+  AboutVision,
+  AboutTestimonials,
   ContactUs,
 } from "../components/_external-pages/about";
 import { PostItem } from "src/components/_external-pages/landing";
@@ -18,22 +24,21 @@ const RootStyle = styled(Page)(({ theme }) => ({
 
 const data = {
   item: {
-    prefix: "Automate Your Resume workflows with AI",
+    prefix: "IRekommend Hiring app",
     description: [
       {
-        prefix: "IRekommend's ",
         suffix:
-          "s AI solutions work with your existing systems — extracting maximum value from your documents with minimum efforts. ",
+          "The quickest way to hire! If your organization is hiring, kindly schedule a call with us now and our team will get in touch with you for providing you an AI based hiring app which will make your candidate journey simple.",
       },
     ],
-    imageUrl: "/static/resume-parsing/resume_parsing.svg",
+    imageUrl: "/static/candidate-sourcing/candidate_sourcing.svg",
     buttonTitle: 'Free Trial',
     direction: true,
   },  
 };
 // ----------------------------------------------------------------------
 
-export default function ResumeParsing() {
+export default function CandidateSourcing() {
   return (
     <RootStyle title="About us | Minimal-UI">    
       <PostItem {...data.item} />

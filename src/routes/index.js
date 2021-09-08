@@ -175,7 +175,13 @@ export default function Router() {
         { path: 'blog', element: <Blog /> },
         { path: 'resume-builder', element: <ResumeBuilder /> },
         { path: 'resume-parsing', element: <ResumeParsing /> },
+        { path: 'resume-upload', element: <ResumeUpload /> },
         { path: 'contact-us', element: <Contact /> },
+        { path: 'privacy-policy', element: <PrivacyPolicy /> },
+        { path: 'terms-conditions', element: <TermsConditions /> },
+        { path: 'recruitment-solution', element: <RecruitmentSolution /> },
+        { path: 'candidate-sourcing', element: <CandidateSourcing /> },
+        { path: 'rekommendation', element: <Rekommendation /> },
         { path: 'faqs', element: <Faqs /> },
         {
           path: 'components',
@@ -275,6 +281,12 @@ const About = Loadable(lazy(() => import('../pages/About')));
 const Blog = Loadable(lazy(() => import('../pages/Blog')));
 const ResumeBuilder = Loadable(lazy(() => import('../pages/ResumeBuilder')));
 const ResumeParsing = Loadable(lazy(() => import('../pages/ResumeParsing')));
+const ResumeUpload = Loadable(lazy(() => import('../pages/ResumeUpload')));
+const PrivacyPolicy = Loadable(lazy(() => import('../pages/PrivacyPolicy')));
+const TermsConditions = Loadable(lazy(() => import('../pages/TermsConditions')));
+const CandidateSourcing = Loadable(lazy(() => import('../pages/CandidateSourcing')));
+const RecruitmentSolution = Loadable(lazy(() => import('../pages/RecruitmentSolution')));
+const Rekommendation = Loadable(lazy(() => import('../pages/Rekommendation')));
 const Contact = Loadable(lazy(() => import('../pages/Contact')));
 const Faqs = Loadable(lazy(() => import('../pages/Faqs')));
 const ComingSoon = Loadable(lazy(() => import('../pages/ComingSoon')));
