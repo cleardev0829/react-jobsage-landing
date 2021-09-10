@@ -32,7 +32,7 @@ const LINKS = [
     children: [
       { name: 'About us', href: PATH_PAGE.about },
       { name: 'Contact us', href: PATH_PAGE.contact },
-      { name: 'FAQs', href: PATH_PAGE.faqs }
+      // { name: 'FAQs', href: PATH_PAGE.faqs }
     ]
   },
   {

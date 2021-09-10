@@ -22,11 +22,11 @@ const data = {
     description: [
       {
         suffix:
-          "Unmatched Speed, Accuracy & Stability of our AI for recommending Candidates for you IRekommend' s AI deep learning Engine reads resumes as humans with career Persona not just a string of keywords. We've modeled our Machine learning model to think like a recruiting human. With our AI the human bias is completely removed  and it makes recruitment process so simple and standard, with our Job and Candidate Matching AI, you can complete your heaviest of recruitment tasks in minutes.",
+          "Our AI reads resumes as humans with career Persona and not just a string of keywords. We've modeled our machine learning model to think like a recruiting human for unmatched speed, accuracy & stability when recommending candidates",
       },
     ],
     imageUrl: "/static/rekommendation/rekommendation.svg",
-    buttonTitle: 'Free Trial',
+    buttonTitle: 'Try now',
     direction: true,
   },  
 };

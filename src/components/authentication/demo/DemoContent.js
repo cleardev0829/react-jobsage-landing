@@ -64,16 +64,6 @@ function IconBullet({ type = "item" }) {
 }
 
 export default function DemoContent(props) {
-  const {
-    title,
-    prefix,
-    suffix,
-    description,
-    buttonTitle,
-    imageUrl,
-    direction,
-  } = props;
-
   const theme = useTheme();
   const isLight = theme.palette.mode === "light";
 
@@ -104,7 +94,7 @@ export default function DemoContent(props) {
           <Grid item xs={12} md={6} dir="ltr" sx={{pl: 10}}>
             <Box>
               <MotionInView variants={varFadeInUp}>
-                <img alt={`screen`} src="/static/demo/book-store.svg" />
+                <img alt={`screen`} src="/static/demo/demo.png" />
               </MotionInView>
             </Box>
           </Grid>

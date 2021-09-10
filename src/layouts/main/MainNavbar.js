@@ -81,9 +81,9 @@ export default function MainNavbar() {
               <Button to={PATH_PAGE.demo} sx={{ borderRadius: 50 }} color="secondary" variant="contained" component={RouterLink}>
                 Demo
               </Button>
-              <Button sx={{ borderRadius: 50 }} variant="contained">
+              {/* <Button sx={{ borderRadius: 50 }} variant="contained">
                 Free Trial
-              </Button>
+              </Button> */}
             </Stack>
           </MHidden>
           <MHidden width="mdUp">

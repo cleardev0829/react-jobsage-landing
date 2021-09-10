@@ -27,7 +27,7 @@ const data = {
       },
     ],
     imageUrl: "/static/resume-parsing/resume_parsing.svg",
-    buttonTitle: 'Free Trial',
+    buttonTitle: 'Try now',
     direction: true,
   },  
 };

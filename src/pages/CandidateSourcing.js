@@ -32,7 +32,7 @@ const data = {
       },
     ],
     imageUrl: "/static/candidate-sourcing/candidate_sourcing.svg",
-    buttonTitle: 'Free Trial',
+    buttonTitle: 'Try now',
     direction: true,
   },  
 };

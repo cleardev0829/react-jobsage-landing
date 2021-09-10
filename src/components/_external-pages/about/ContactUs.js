@@ -71,7 +71,7 @@ function MemberCard({ member }) {
   );
 }
 
-export default function AboutTeam() {
+export default function ContactUs() {
   return (
     <RootStyle>
       <MotionInView variants={varFadeInUp}>

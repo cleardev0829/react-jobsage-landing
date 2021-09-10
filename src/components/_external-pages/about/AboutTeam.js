@@ -37,11 +37,11 @@ const MEMBERS = [
   //   role: "Head of growth",
   //   avatar: "/static/about/advisor-1.svg",
   // },
-  {
-    name: 'Dipankar Adhikari Head',
-    role: "Strategy & Finance Ops",
-    avatar: "/static/about/testimonials-2.png",
-  },
+  // {
+  //   name: 'Dipankar Adhikari Head',
+  //   role: "Strategy & Finance Ops",
+  //   avatar: "/static/about/testimonials-2.png",
+  // },
   {
     name: 'Philomena Lamoureux',
     role: "(Advisor) Head of AI – blooma.ai",
@@ -57,15 +57,20 @@ const MEMBERS = [
     role: "(Advisor) People-Operations - Google",
     avatar: "/static/about/testimonials-5.png",
   },
-  {
-    name: 'Ashish Pant',
-    role: "Global Head of People Analytics, Novartis",
-    avatar: "/static/about/testimonials-6.png",
-  },
+  // {
+  //   name: 'Ashish Pant',
+  //   role: "Global Head of People Analytics, Novartis",
+  //   avatar: "/static/about/testimonials-6.png",
+  // },
   {
     name: 'Philomena Lamoureux',
     role: "(Advisor) Head of AI – blooma.ai",
     avatar: "/static/about/testimonials-7.png",
+  },
+  {
+    name: 'Sudeep Nagar',
+    role: "Vice President, Sales & Operations – Bluestone",
+    avatar: "/static/about/testimonials-6.png",
   },
 ];
 

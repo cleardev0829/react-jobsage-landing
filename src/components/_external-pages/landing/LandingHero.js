@@ -198,25 +198,34 @@ export default function LandingHero() {
           sx={{ zIndex: 10 }}
           spacing={2}
         >
+          <motion.div variants={varFadeInRight}>
+            <Typography color="white">
+              The starting point for your next project based on
+              easy-to-customize Material-UI © helps you build apps faster and
+              better.
+            </Typography>
+          </motion.div>
           <Grid item xs={12}>
-            <MHidden width="mdDown">
-              <Typography
-                color="white"
-                style={{ fontSize: 80, fontWeight: 500 }}
-                sx={{ mb: 3 }}
-              >
-                Find your <span style={{ color: "#2C7BFF" }}>dream</span> job
-              </Typography>
-            </MHidden>
-            <MHidden width="mdUp">
-              <Typography
-                color="white"
-                style={{ fontSize: 30, fontWeight: 300 }}
-                sx={{ mb: 3 }}
-              >
-                Find your <span style={{ color: "#2C7BFF" }}>dream</span> job
-              </Typography>
-            </MHidden>
+            <motion.div variants={varFadeInRight}>
+              <MHidden width="mdDown">
+                <Typography
+                  color="white"
+                  style={{ fontSize: 80, fontWeight: 500 }}
+                  sx={{ mb: 3 }}
+                >
+                  Find your <span style={{ color: "#2C7BFF" }}>dream</span> job
+                </Typography>
+              </MHidden>
+              <MHidden width="mdUp">
+                <Typography
+                  color="white"
+                  style={{ fontSize: 30, fontWeight: 300 }}
+                  sx={{ mb: 3 }}
+                >
+                  Find your <span style={{ color: "#2C7BFF" }}>dream</span> job
+                </Typography>
+              </MHidden>
+            </motion.div>
           </Grid>
           <MHidden width="mdDown">
             <Grid item xs={12} sx={{ width: "60%" }}>
@@ -227,7 +236,7 @@ export default function LandingHero() {
                 alignItems="center"
                 spacing={0.5}
               >
-                {/* <Grid item xs={5}>
+                <Grid item xs={5}>
                   <KeywordTextFieldDesktop
                     label="Enter job titles, keywords etc"
                     variant="filled"
@@ -251,7 +260,7 @@ export default function LandingHero() {
                   >
                     Search
                   </Button>
-                </Grid> */}
+                </Grid>
               </Grid>
             </Grid>
           </MHidden>
@@ -295,7 +304,7 @@ export default function LandingHero() {
         </Grid>
         <HeroOverlayStyle
           alt="hero"
-          src="/static/home/hero.svg"
+          src="/static/home/home.png"
           variants={varFadeIn}
         />
         <HeroOverlayStyle

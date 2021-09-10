@@ -17,6 +17,7 @@ import {
   Button,
   FormControlLabel,
   Checkbox,
+  Box,
 } from "@material-ui/core";
 import { LoadingButton } from "@material-ui/lab";
 // hooks
@@ -219,14 +220,16 @@ export default function RegisterForm() {
             />
           </MotionInView>
 
-          <LoadingButton
-            size="large"
-            type="submit"
-            variant="contained"
-            loading={isSubmitting}
-          >
-            Request Demo
-          </LoadingButton>
+          <Box sx={{ mt: 3, display: "flex", justifyContent: "flex-end" }}>
+            <LoadingButton
+              size="large"
+              type="submit"
+              variant="contained"
+              loading={isSubmitting}
+            >
+              Request Demo
+            </LoadingButton>
+          </Box>
         </Stack>
       </Form>
     </FormikProvider>

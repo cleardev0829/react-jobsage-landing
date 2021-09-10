@@ -135,13 +135,21 @@ export default function ContactUsWithMap() {
       </MotionInView>
 
       <Container sx={{ my: 10 }}>
-        <Grid container spacing={10}>
+        <Grid
+          container
+          spacing={10}
+          sx={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "center",
+          }}
+        >
           <Grid item xs={12} md={6}>
             <ContactForm />
           </Grid>
-          <Grid item xs={12} md={6}>
+          {/* <Grid item xs={12} md={6}>
             <ContactMap />
-          </Grid>
+          </Grid> */}
         </Grid>
       </Container>
     </Container>

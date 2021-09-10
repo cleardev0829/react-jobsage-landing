@@ -24,15 +24,15 @@ export default function ResumeBuilder() {
   return (
     <RootStyle title="About us | Minimal-UI">
       <PostItem
-        prefix="Try our Professional Resume Builder For Free"
+        prefix="Get hired faster with our resume builder!"
         description={[
           {
             suffix:
-              "With high competition in the job market, a Candidate needs all the gears to land the job role they want. IRekommend offers all the tools to help you build a compelling Resume that will get you noticed by employers.",
+              "Resume examples designed by recruiters to help you land the job. Our professionally written resumes are tailored for thousands of unique jobs, including engineering, marketing and finance.",
           },
         ]}
         buttonTitle="Build your Resume"
-        imageUrl="/static/resume-builder/resume.svg"
+        imageUrl="/static/resume-builder/resume.png"
         direction={true}
       />   
       <ResumeTemplates />

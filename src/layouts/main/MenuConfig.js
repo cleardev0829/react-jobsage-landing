@@ -19,11 +19,11 @@ const menuConfig = [
     icon: <Icon icon={homeFill} {...ICON_SIZE} />,
     path: '/'
   },
-  {
-    title: 'Upload resume',
-    icon: <Icon icon={roundGrain} {...ICON_SIZE} />,
-    path: PATH_PAGE.resumeUpload
-  },
+  // {
+  //   title: 'Upload resume',
+  //   icon: <Icon icon={roundGrain} {...ICON_SIZE} />,
+  //   path: PATH_PAGE.resumeUpload
+  // },
   {
     title: 'Resume builder',
     icon: <Icon icon={bookOpenFill} {...ICON_SIZE} />,
@@ -55,7 +55,6 @@ const menuConfig = [
         items: [
           { title: 'Recruitment Solution', path: PATH_PAGE.recruitmentSolution },         
           { title: 'Resume Parsing', path: PATH_PAGE.resumeParsing },         
-          { title: 'Resume Builder', path: PATH_PAGE.resumeBuilder },         
           { title: 'Candidate Sourcing', path: PATH_PAGE.candidateSourcing },      
           { title: 'Rekommendation', path: PATH_PAGE.rekommendation },      
         ]
