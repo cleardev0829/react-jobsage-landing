@@ -200,9 +200,7 @@ export default function LandingHero() {
         >
           <motion.div variants={varFadeInRight}>
             <Typography color="white">
-              The starting point for your next project based on
-              easy-to-customize Material-UI © helps you build apps faster and
-              better.
+              Hiring made simple with our AI based global talent platform
             </Typography>
           </motion.div>
           <Grid item xs={12}>
