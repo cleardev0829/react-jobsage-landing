@@ -181,7 +181,7 @@ export default function Router() {
         { path: 'terms-conditions', element: <TermsConditions /> },
         { path: 'recruitment-solution', element: <RecruitmentSolution /> },
         { path: 'candidate-sourcing', element: <CandidateSourcing /> },
-        { path: 'post-search', element: <PostSearch /> },
+        { path: 'post-search/:from', element: <PostSearch /> },
         { path: 'rekommendation', element: <Rekommendation /> },
         { path: 'faqs', element: <Faqs /> },
         {

@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import SearchIcon from "@material-ui/icons/Search";
+import { Link, NavLink as RouterLink } from "react-router-dom";
 // material
 import { experimentalStyled as styled } from "@material-ui/core/styles";
 import {
@@ -15,6 +16,7 @@ import { varFadeIn, varWrapEnter, varFadeInRight } from "../../animate";
 import { alpha, makeStyles } from "@material-ui/core/styles";
 
 import { MHidden } from "../../@material-extend";
+import { PATH_PAGE } from "src/routes/paths";
 
 // ----------------------------------------------------------------------
 
@@ -254,6 +256,9 @@ export default function LandingHero() {
                     size="large"
                     className={classes.buttonDesktop}
                     startIcon={<SearchIcon />}
+                    to={PATH_PAGE.postSearchHome}
+                    component={RouterLink}
+
                   >
                     Search
                   </Button>

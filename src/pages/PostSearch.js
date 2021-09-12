@@ -10,6 +10,7 @@ import {
   KeywordTextFieldDesktop,
   RegionTextFieldDesktop,
 } from "src/components/_external-pages/landing/LandingHero";
+import { useParams } from "react-router-dom";
 
 // ----------------------------------------------------------------------
 
@@ -50,6 +51,7 @@ const data = {
 
 export default function PostSearch() {
   const classes = useStyles();
+  const routeParams = useParams([]);
 
   return (
     <RootStyle title="About us | Minimal-UI">
@@ -90,16 +92,20 @@ export default function PostSearch() {
           </Grid>
         </Grid>
         <Grid item xs={12} sx={{ mb: 1 }}>
-          <TextField
-            sx={{ width: "100%" }}
-            label="500 resumes found"
-          />
+          <TextField sx={{ width: "100%" }} label="500 resumes found" />
         </Grid>
         <Grid container xs={12}>
-          <Grid item xs={12} md={4} sx={{pr: 1}}>
-            <SearchPanel {...data.item} />
-          </Grid>
-          <Grid item xs={12} md={8} sx={{pl: 1}}>
+          {routeParams.from === "candidate-sourcing" && (
+            <Grid item xs={12} md={4} sx={{ pr: 1 }}>
+              <SearchPanel {...data.item} />
+            </Grid>
+          )}
+          <Grid
+            item
+            xs={12}
+            md={routeParams.from === "candidate-sourcing" ? 8 : 12}
+            sx={{ pl: routeParams.from === "candidate-sourcing" ? 1 : 0 }}
+          >
             <PostItem1 {...data.item} />
             <PostItem1 {...data.item} />
             <PostItem1 {...data.item} />

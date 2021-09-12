@@ -1,27 +1,18 @@
 import { orderBy } from "lodash";
-import { Icon } from "@iconify/react";
-import plusFill from "@iconify/icons-eva/plus-fill";
-import { Link as RouterLink } from "react-router-dom";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { useEffect, useCallback, useState } from "react";
 // material
 import {
   Box,
   Grid,
-  Button,
   Skeleton,
   Container,
   Stack,
 } from "@material-ui/core";
 import { experimentalStyled as styled } from "@material-ui/core/styles";
-// redux
 import { useDispatch, useSelector } from "../redux/store";
 import { getPostsInitial, getMorePosts } from "../redux/slices/blog";
-// routes
-import { PATH_DASHBOARD } from "../routes/paths";
-// components
 import Page from "../components/Page";
-import HeaderBreadcrumbs from "../components/HeaderBreadcrumbs";
 import {
   BlogPostCard,
   BlogPostsSort,
@@ -97,28 +88,8 @@ export default function BlogPosts() {
   };
 
   return (
-    // <Page title="Blog: Posts | Minimal-UI">
     <RootStyle>
       <Container sx={{my: 8}}>
-        {/* <HeaderBreadcrumbs
-          heading="Blog"
-          links={[
-            { name: "Dashboard", href: PATH_DASHBOARD.root },
-            { name: "Blog", href: PATH_DASHBOARD.blog.root },
-            { name: "Posts" },
-          ]}
-          action={
-            <Button
-              variant="contained"
-              component={RouterLink}
-              to={PATH_DASHBOARD.blog.newPost}
-              startIcon={<Icon icon={plusFill} />}
-            >
-              New Post
-            </Button>
-          }
-        /> */}
-
         <Stack
           mb={5}
           direction="row"
@@ -148,6 +119,5 @@ export default function BlogPosts() {
         </InfiniteScroll>
       </Container>
     </RootStyle>
-    // </Page>
   );
 }

@@ -11,6 +11,7 @@ import {
 } from "@material-ui/core";
 import { varFadeInUp, MotionInView } from "../../animate";
 
+
 // ----------------------------------------------------------------------
 
 const RootStyle = styled("div")(({ theme }) => ({
