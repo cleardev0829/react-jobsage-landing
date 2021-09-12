@@ -6,6 +6,7 @@ import {
   ContactUs,
 } from "../components/_external-pages/about";
 import { PostItem } from "src/components/_external-pages/landing";
+import { PATH_PAGE } from "src/routes/paths";
 
 // ----------------------------------------------------------------------
 
@@ -29,6 +30,7 @@ const data = {
     imageUrl: "/static/resume-parsing/resume_parsing.svg",
     buttonTitle: 'Try now',
     direction: true,
+    to: PATH_PAGE.resumeUpload
   },  
 };
 // ----------------------------------------------------------------------

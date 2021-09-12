@@ -12,6 +12,7 @@ import {
   ContactUs,
 } from "../components/_external-pages/about";
 import { PostItem } from "src/components/_external-pages/landing";
+import { PATH_PAGE } from "src/routes/paths";
 
 // ----------------------------------------------------------------------
 
@@ -34,6 +35,7 @@ const data = {
     imageUrl: "/static/candidate-sourcing/candidate_sourcing.svg",
     buttonTitle: 'Try now',
     direction: true,
+    to: PATH_PAGE.postSearch
   },  
 };
 // ----------------------------------------------------------------------

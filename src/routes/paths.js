@@ -36,6 +36,7 @@ export const PATH_PAGE = {
   termsConditions: '/terms-conditions',
   recruitmentSolution: '/recruitment-solution',
   candidateSourcing: '/candidate-sourcing',
+  postSearch: '/post-search',
   rekommendation: '/rekommendation',
   faqs: '/faqs',
   page404: '/404',

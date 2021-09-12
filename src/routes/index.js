@@ -181,6 +181,7 @@ export default function Router() {
         { path: 'terms-conditions', element: <TermsConditions /> },
         { path: 'recruitment-solution', element: <RecruitmentSolution /> },
         { path: 'candidate-sourcing', element: <CandidateSourcing /> },
+        { path: 'post-search', element: <PostSearch /> },
         { path: 'rekommendation', element: <Rekommendation /> },
         { path: 'faqs', element: <Faqs /> },
         {
@@ -285,6 +286,7 @@ const ResumeUpload = Loadable(lazy(() => import('../pages/ResumeUpload')));
 const PrivacyPolicy = Loadable(lazy(() => import('../pages/PrivacyPolicy')));
 const TermsConditions = Loadable(lazy(() => import('../pages/TermsConditions')));
 const CandidateSourcing = Loadable(lazy(() => import('../pages/CandidateSourcing')));
+const PostSearch = Loadable(lazy(() => import('../pages/PostSearch')));
 const RecruitmentSolution = Loadable(lazy(() => import('../pages/RecruitmentSolution')));
 const Rekommendation = Loadable(lazy(() => import('../pages/Rekommendation')));
 const Contact = Loadable(lazy(() => import('../pages/Contact')));

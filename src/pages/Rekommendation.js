@@ -28,6 +28,7 @@ const data = {
     imageUrl: "/static/rekommendation/rekommendation.svg",
     buttonTitle: 'Try now',
     direction: true,
+    link: 'https://irekommend.com'
   },  
 };
 // ----------------------------------------------------------------------

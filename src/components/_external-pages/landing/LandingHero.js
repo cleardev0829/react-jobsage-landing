@@ -5,7 +5,6 @@ import { experimentalStyled as styled } from "@material-ui/core/styles";
 import {
   Box,
   Typography,
-  Stack,
   Grid,
   TextField,
   Button,
@@ -59,7 +58,7 @@ const useStylesKeywordDesktop = makeStyles((theme) => ({
   focused: {},
 }));
 
-function KeywordTextFieldDesktop(props) {
+export function KeywordTextFieldDesktop(props) {
   const classes = useStylesKeywordDesktop();
 
   return (
@@ -91,7 +90,7 @@ const useStylesKeywordMobile = makeStyles((theme) => ({
   focused: {},
 }));
 
-function KeywordTextFieldMobile(props) {
+export function KeywordTextFieldMobile(props) {
   const classes = useStylesKeywordMobile();
 
   return (
@@ -103,7 +102,7 @@ function KeywordTextFieldMobile(props) {
   );
 }
 
-const useStylesRegionDesktop = makeStyles((theme) => ({
+export const useStylesRegionDesktop = makeStyles((theme) => ({
   root: {
     height: 60,
     border: "1px solid #e2e2e1",
@@ -123,7 +122,7 @@ const useStylesRegionDesktop = makeStyles((theme) => ({
   focused: {},
 }));
 
-function RegionTextFieldDesktop(props) {
+export function RegionTextFieldDesktop(props) {
   const classes = useStylesRegionDesktop();
 
   return (
@@ -135,7 +134,7 @@ function RegionTextFieldDesktop(props) {
   );
 }
 
-const useStylesRegionMobile = makeStyles((theme) => ({
+export const useStylesRegionMobile = makeStyles((theme) => ({
   root: {
     height: 60,
     border: "1px solid #e2e2e1",
@@ -155,7 +154,7 @@ const useStylesRegionMobile = makeStyles((theme) => ({
   focused: {},
 }));
 
-function RegionTextFieldMobile(props) {
+export function RegionTextFieldMobile(props) {
   const classes = useStylesRegionMobile();
 
   return (
@@ -199,7 +198,7 @@ export default function LandingHero() {
           spacing={2}
         >
           <motion.div variants={varFadeInRight}>
-            <Typography color="white">
+            <Typography variant="h2" color="white">
               Hiring made simple with our AI based global talent platform
             </Typography>
           </motion.div>

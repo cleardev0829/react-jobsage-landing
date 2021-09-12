@@ -9,3 +9,5 @@ export { default as LandingHugePackElements } from "./LandingHugePackElements";
 // export { default as LandingCandidate } from "./LandingCandidate";
 // export { default as LandingResume } from "./LandingResume";
 export { default as PostItem } from "./PostItem";
+export { default as PostItem1 } from "./PostItem1";
+export { default as SearchPanel } from "./SearchPanel";

@@ -12,6 +12,7 @@ import {
   Divider,
   ListItem,
 } from "@material-ui/core";
+import { Link, NavLink as RouterLink } from "react-router-dom";
 import { varFadeInUp, MotionInView } from "../../animate";
 import { MHidden } from "../../@material-extend";
 
@@ -71,6 +72,8 @@ export default function PostItem(props) {
     buttonTitle,
     imageUrl,
     direction,
+    to,
+    link,
   } = props;
 
   const theme = useTheme();
@@ -120,7 +123,6 @@ export default function PostItem(props) {
               {description.map((item, index) => (
                 <MotionInView variants={varFadeInUp}>
                   <Typography
-                    // variant="subtitle1"
                     sx={{
                       mb: 4,
                       color: isLight ? "text.secondary" : "common.white",
@@ -130,7 +132,7 @@ export default function PostItem(props) {
                       <>
                         <span style={{ fontWeight: "bold" }}>
                           {item.prefix}
-                        </span>                       
+                        </span>
                       </>
                     )}
                     {item.iconBullet ? (
@@ -149,13 +151,29 @@ export default function PostItem(props) {
                 </MotionInView>
               ))}
 
-              {buttonTitle && (
+              {buttonTitle && to && (
                 <MotionInView variants={varFadeInUp}>
                   <Button
                     size="middle"
                     color="primary"
                     variant="contained"
                     sx={{ borderRadius: 50 }}
+                    to={to}
+                    component={RouterLink}
+                  >
+                    {buttonTitle}
+                  </Button>
+                </MotionInView>
+              )}
+              {buttonTitle && link && (
+                <MotionInView variants={varFadeInUp}>
+                  <Button
+                    size="middle"
+                    color="primary"
+                    target='_blank'
+                    variant="contained"
+                    sx={{ borderRadius: 50 }}
+                    href={link}
                   >
                     {buttonTitle}
                   </Button>
