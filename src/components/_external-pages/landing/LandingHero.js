@@ -3,13 +3,7 @@ import SearchIcon from "@material-ui/icons/Search";
 import { Link, NavLink as RouterLink } from "react-router-dom";
 // material
 import { experimentalStyled as styled } from "@material-ui/core/styles";
-import {
-  Box,
-  Typography,
-  Grid,
-  TextField,
-  Button,
-} from "@material-ui/core";
+import { Box, Typography, Grid, TextField, Button } from "@material-ui/core";
 // routes
 import { varFadeIn, varWrapEnter, varFadeInRight } from "../../animate";
 
@@ -199,11 +193,28 @@ export default function LandingHero() {
           sx={{ zIndex: 10 }}
           spacing={2}
         >
-          <motion.div variants={varFadeInRight}>
-            <Typography variant="h2" color="white">
-              Hiring made simple with our AI based global talent platform
-            </Typography>
-          </motion.div>
+          <Grid item xs={12}>
+            <motion.div variants={varFadeInRight}>
+              <MHidden width="mdDown">
+                <Typography
+                  color="white"
+                  style={{ fontSize: 40, fontWeight: 400 }}
+                  sx={{ mb: 3 }}
+                >
+                  Hiring made simple with our AI based global talent platform
+                </Typography>
+              </MHidden>
+              <MHidden width="mdUp">
+                <Typography
+                  color="white"
+                  style={{ fontSize: 20, fontWeight: 200 }}
+                  sx={{ mb: 3 }}
+                >
+                  Hiring made simple with our AI based global talent platform
+                </Typography>
+              </MHidden>
+            </motion.div>
+          </Grid>
           <Grid item xs={12}>
             <motion.div variants={varFadeInRight}>
               <MHidden width="mdDown">
@@ -226,7 +237,7 @@ export default function LandingHero() {
               </MHidden>
             </motion.div>
           </Grid>
-          <MHidden width="mdDown">
+          {/* <MHidden width="mdDown">
             <Grid item xs={12} sx={{ width: "60%" }}>
               <Grid
                 container
@@ -258,14 +269,13 @@ export default function LandingHero() {
                     startIcon={<SearchIcon />}
                     to={PATH_PAGE.postSearchHome}
                     component={RouterLink}
-
                   >
                     Search
                   </Button>
                 </Grid>
               </Grid>
             </Grid>
-          </MHidden>
+          </MHidden> */}
           <MHidden width="mdUp">
             <Grid item xs={12} sx={{ width: "100%" }}>
               <Grid

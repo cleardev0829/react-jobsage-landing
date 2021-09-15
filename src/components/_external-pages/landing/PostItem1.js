@@ -2,15 +2,8 @@ import {
   useTheme,
   experimentalStyled as styled,
 } from "@material-ui/core/styles";
-import {
-  Grid,
-  Container,
-  Typography,
-  Paper,
-  Stack,
-} from "@material-ui/core";
+import { Grid, Typography, Paper, Stack } from "@material-ui/core";
 import { varFadeInUp, MotionInView } from "../../animate";
-
 
 // ----------------------------------------------------------------------
 
@@ -53,70 +46,79 @@ const ContentItem = (props) => (
 );
 
 export default function PostItem1(props) {
-  const { companyName, jobTitle, location, skills, education, lastUpdated } =
-    props;
-
-  const theme = useTheme();
+  const {
+    company,
+    jobTitle,
+    location,
+    skills,
+    education,
+    yearOfExperience,
+    lastUpdated,
+  } = props;
 
   return (
     <RootStyle>
       {/* <Container maxWidth="lg"> */}
-        <Paper
-          sx={{
-            py: 3,
-            px: 4,
-            width: "100%",
-            borderRadius: 0.1,
-            zIndex: (theme) => theme.zIndex.modal,
-            boxShadow: (theme) => theme.customShadows.z20,
-          }}
+      <Paper
+        sx={{
+          py: 3,
+          px: 4,
+          width: "100%",
+          borderRadius: 0.1,
+          zIndex: (theme) => theme.zIndex.modal,
+          boxShadow: (theme) => theme.customShadows.z20,
+        }}
+      >
+        <Grid
+          container
+          // spacing={5}
+          justifyContent="flex-start"
         >
           <Grid
-            container
-            // spacing={5}
-            justifyContent="flex-start"
+            item
+            xs={12}
+            md={12}
+            sx={{ display: "flex", alignItems: "center", px: 4 }}
           >
-            <Grid
-              item
-              xs={12}
-              md={6}
-              sx={{ display: "flex", alignItems: "center", px: 4 }}
-            >
-              <ContentStyle>
-                <MotionInView variants={varFadeInUp}>
-                  <Typography variant="h5" sx={{ mb: 2 }}>
-                    <span
-                      style={{ fontWeight: "bold" }}
-                    >{`Company name - ${companyName}`}</span>
+            <ContentStyle>
+              <MotionInView variants={varFadeInUp}>
+                <Typography variant="h5" sx={{ mb: 2 }}>
+                  <span
+                    style={{ fontWeight: "bold" }}
+                  >{`Title - ${jobTitle}`}</span>
+                </Typography>
+              </MotionInView>
+
+              <ContentItem title="Last company worked" value={company} />
+              <ContentItem title="Location" value={location} />
+              <ContentItem title="Skills required" value={skills} />
+              <ContentItem title="Education required" value={education} />
+              <ContentItem
+                title="Year of experience"
+                value={yearOfExperience}
+              />
+
+              <MotionInView variants={varFadeInUp}>
+                <Stack
+                  direction="row"
+                  sx={{
+                    mt: 3,
+                  }}
+                >
+                  <Typography color="secondary">
+                    <span style={{ fontWeight: "bold" }}>Last updated</span>
                   </Typography>
-                </MotionInView>
-
-                <ContentItem title="Job title" value={jobTitle} />
-                <ContentItem title="Location" value={location} />
-                <ContentItem title="Skills required" value={skills} />
-                <ContentItem title="Education required" value={education} />
-
-                <MotionInView variants={varFadeInUp}>
-                  <Stack
-                    direction="row"
-                    sx={{
-                      mt: 3,
-                    }}
-                  >
-                    <Typography color="secondary">
-                      <span style={{ fontWeight: "bold" }}>Last updated</span>
-                    </Typography>
-                    <Typography>
-                      <span style={{ fontWeight: "bold" }}>
-                        &nbsp;{`- ${lastUpdated}`}
-                      </span>
-                    </Typography>
-                  </Stack>
-                </MotionInView>
-              </ContentStyle>
-            </Grid>
+                  <Typography>
+                    <span style={{ fontWeight: "bold" }}>
+                      &nbsp;{`- ${lastUpdated}`}
+                    </span>
+                  </Typography>
+                </Stack>
+              </MotionInView>
+            </ContentStyle>
           </Grid>
-        </Paper>
+        </Grid>
+      </Paper>
       {/* </Container> */}
     </RootStyle>
   );

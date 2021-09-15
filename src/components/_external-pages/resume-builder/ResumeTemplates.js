@@ -74,14 +74,22 @@ function ResumeCard({ member }) {
     <Card key={name} sx={{ p: 1, mx: 1.5 }}>
       <Typography variant="subtitle1" sx={{ mt: 2, mb: 0.5 }}>
         {name}
-      </Typography>     
+      </Typography>
       <Box
         component="img"
         src={avatar}
         sx={{ width: "100%", borderRadius: 1.5 }}
       />
-        <Box sx={{ mt: 1, mb: 1 }}>
-        <Button  variant="contained">
+      <Box sx={{ mt: 1, mb: 1 }}>
+        <Button
+          variant="contained"
+          onClick={() => {
+            window.open(
+              "https://firebasestorage.googleapis.com/v0/b/rekommender-sai-firebase-prod.appspot.com/o/Business_Development.pdf?alt=media&token=4f725277-f070-42b7-aae0-2f9fe2e74631",
+              "_blank"
+            );
+          }}
+        >
           Use this template
         </Button>
       </Box>

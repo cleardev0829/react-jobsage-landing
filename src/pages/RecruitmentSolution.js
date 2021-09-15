@@ -110,7 +110,7 @@ export default function RecruitmentSolution() {
       <PostItem {...data.talent} />
       <PostItem {...data.candidate} />
       <PostItem {...data.reports} />
-      <PostItem {...data.engagement} />      
+      <PostItem {...data.engagement} />
       <ContactUs />
     </RootStyle>
   );

@@ -33,16 +33,16 @@ const data = {
       },
     ],
     imageUrl: "/static/candidate-sourcing/candidate_sourcing.svg",
-    buttonTitle: 'Try now',
+    buttonTitle: "Try now",
     direction: true,
-    to: PATH_PAGE.postSearch
-  },  
+    to: PATH_PAGE.postSearch,
+  },
 };
 // ----------------------------------------------------------------------
 
 export default function CandidateSourcing() {
   return (
-    <RootStyle title="About us | Minimal-UI">    
+    <RootStyle title="About us | Minimal-UI">
       <PostItem {...data.item} />
       <ContactUs />
     </RootStyle>

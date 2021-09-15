@@ -2,9 +2,7 @@
 import { experimentalStyled as styled } from "@material-ui/core/styles";
 // components
 import Page from "../components/Page";
-import {
-  ContactUs,
-} from "../components/_external-pages/about";
+import { ContactUs } from "../components/_external-pages/about";
 import { PostItem } from "src/components/_external-pages/landing";
 import { PATH_PAGE } from "src/routes/paths";
 
@@ -28,16 +26,16 @@ const data = {
       },
     ],
     imageUrl: "/static/resume-parsing/resume_parsing.svg",
-    buttonTitle: 'Try now',
+    buttonTitle: "Try now",
     direction: true,
-    to: PATH_PAGE.resumeUpload
-  },  
+    to: PATH_PAGE.resumeUpload,
+  },
 };
 // ----------------------------------------------------------------------
 
 export default function ResumeParsing() {
   return (
-    <RootStyle title="About us | Minimal-UI">    
+    <RootStyle title="About us | Minimal-UI">
       <PostItem {...data.item} />
       <ContactUs />
     </RootStyle>

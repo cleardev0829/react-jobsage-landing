@@ -40,11 +40,12 @@ const useStyles = makeStyles((theme) => ({
 
 const data = {
   item: {
-    companyName: "Dummy text",
     jobTitle: "Full stack developer",
+    company: "Test company",
     location: "",
     skills: "Php, Laravel, mongoDB",
     education: "Minimum 16 years of education",
+    yearOfExperience: "1 year frontend development...",
     lastUpdated: "Today",
   },
 };
@@ -64,21 +65,14 @@ export default function PostSearch() {
             alignItems="center"
             spacing={0.5}
           >
-            <Grid item xs={5}>
+            <Grid item xs={10}>
               <KeywordTextFieldDesktop
-                label="Enter job titles, keywords etc"
+                label=" Enter Job titles, keywords etc. or copy paste your job description here"
                 variant="filled"
                 id="keyword-input"
               />
             </Grid>
-            <Grid item xs={4}>
-              <RegionTextFieldDesktop
-                label="City region or post code"
-                variant="filled"
-                id="keyword-input"
-              />
-            </Grid>
-            <Grid item xs={3} style={{ height: "100%" }}>
+            <Grid item xs={2} style={{ height: "100%" }}>
               <Button
                 variant="contained"
                 color="primary"
@@ -90,9 +84,6 @@ export default function PostSearch() {
               </Button>
             </Grid>
           </Grid>
-        </Grid>
-        <Grid item xs={12} sx={{ mb: 1 }}>
-          <TextField sx={{ width: "100%" }} label="500 resumes found" />
         </Grid>
         <Grid container xs={12}>
           {routeParams.from === "candidate-sourcing" && (
@@ -106,6 +97,13 @@ export default function PostSearch() {
             md={routeParams.from === "candidate-sourcing" ? 8 : 12}
             sx={{ pl: routeParams.from === "candidate-sourcing" ? 1 : 0 }}
           >
+            <Grid item xs={12} sx={{ my: 1 }}>
+              <TextField
+                sx={{ width: "100%" }}
+                label="500 resumes found"
+                disabled={true}
+              />
+            </Grid>
             <PostItem1 {...data.item} />
             <PostItem1 {...data.item} />
             <PostItem1 {...data.item} />

@@ -72,7 +72,16 @@ BlogPostCard.propTypes = {
 };
 
 export default function BlogPostCard({ post, index }) {
-  const { cover, title, view, comment, share, author, createdAt } = post;
+  const {
+    cover,
+    title,
+    view,
+    comment,
+    share,
+    author,
+    createdAt,
+    pdfUrl,
+  } = post;
   const linkTo = `${PATH_DASHBOARD.blog.root}/post/${paramCase(title)}`;
   const latestPostLarge = index === 0;
   const latestPost = index === 1 || index === 2;
@@ -162,16 +171,19 @@ export default function BlogPostCard({ post, index }) {
           </Typography>
 
           <TitleStyle
-            to={linkTo}
+            // to={linkTo}
             color="inherit"
             variant="subtitle2"
-            component={RouterLink}
+            // component={RouterLink}
             // sx={{
             //   ...(latestPostLarge && { typography: 'h5', height: 60 }),
             //   ...((latestPostLarge || latestPost) && {
             //     color: 'common.white'
             //   })
             // }}
+            onClick={() => {
+              window.open(pdfUrl, "_blank");
+            }}
           >
             {title}
           </TitleStyle>

@@ -70,21 +70,30 @@ export default function SearchPanel(props) {
               <Stack direction="column" sx={{ px: 4, pt: 2 }}>
                 <MotionInView variants={varFadeInUp}>
                   <Typography sx={{ mb: 2 }}>
-                    <span style={{ fontWeight: "bold" }}>Distance</span>
+                    <span style={{ fontWeight: "bold" }}>Skills</span>
                   </Typography>
                 </MotionInView>
-                <MotionInView variants={varFadeInUp}>
+                {/* <MotionInView variants={varFadeInUp}>
                   <Typography sx={{ mb: 2 }}>
                     Whithin 10 miles of India
                   </Typography>
-                </MotionInView>
+                </MotionInView> */}
 
-                <MotionInView variants={varFadeInUp}>
+                {/* <MotionInView variants={varFadeInUp}>
                   <Slider
                     value={value}
                     onChange={handleChange}
                     aria-labelledby="continuous-slider"
                     sx={{ mb: 2, width: "100%" }}
+                  />
+                </MotionInView> */}
+                <MotionInView variants={varFadeInUp}>
+                  <TextField
+                    fullWidth
+                    label="Search Skills"
+                    required
+                    select
+                    sx={{ mb: 2 }}
                   />
                 </MotionInView>
               </Stack>

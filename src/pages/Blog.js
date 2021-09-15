@@ -75,7 +75,7 @@ const RootStyle = styled(Page)(({ theme }) => ({
 export default function BlogPosts() {
   const dispatch = useDispatch();
   const [filters, setFilters] = useState("latest");
-  const { posts, hasMore, index, step } = useSelector((state) => state.blog);
+  const { posts, hasMore, index, step } = useSelector((state) => state.blog); console.log('=============================================', posts)
   const sortedPosts = applySort(posts, filters);
   const onScroll = useCallback(() => dispatch(getMorePosts()), [dispatch]);
 

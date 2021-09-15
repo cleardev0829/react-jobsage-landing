@@ -1,39 +1,26 @@
 /* eslint-disable no-irregular-whitespace */
 /* eslint-disable no-useless-escape */
-import faker from 'faker';
-import { paramCase } from 'change-case';
+import faker from "faker";
+import { paramCase } from "change-case";
 // utils
-import { mockImgCover } from '../utils/mockImages';
+import { mockImgCover } from "../utils/mockImages";
 //
-import mock from './mock';
+import mock from "./mock";
 
 // ----------------------------------------------------------------------
 
 const POST_TITLES = [
-  'Accelerate Your Recruitment',
-  'Cognitive Hiring: The Future of Recruitment',
-  'HOW AI IS REVOLUTIONIZING CANDIDATE SCREENING',
-  'Workforce of the future!',
-  'Accelerate Your Recruitment',
-  'Cognitive Hiring: The Future of Recruitment',
-  'HOW AI IS REVOLUTIONIZING CANDIDATE SCREENING',
-  'Workforce of the future!',
-  'Accelerate Your Recruitment',
-  'Cognitive Hiring: The Future of Recruitment',
-  'HOW AI IS REVOLUTIONIZING CANDIDATE SCREENING',
-  'Workforce of the future!',
-  'Accelerate Your Recruitment',
-  'Cognitive Hiring: The Future of Recruitment',
-  'HOW AI IS REVOLUTIONIZING CANDIDATE SCREENING',
-  'Workforce of the future!',
-  'Accelerate Your Recruitment',
-  'Cognitive Hiring: The Future of Recruitment',
-  'HOW AI IS REVOLUTIONIZING CANDIDATE SCREENING',
-  'Workforce of the future!',
-  'Accelerate Your Recruitment',
-  'Cognitive Hiring: The Future of Recruitment',
-  'HOW AI IS REVOLUTIONIZING CANDIDATE SCREENING',
-  'Workforce of the future!',
+  "Accelerate Your Recruitment",
+  "Cognitive Hiring: The Future of Recruitment",
+  "HOW AI IS REVOLUTIONIZING CANDIDATE SCREENING",
+  "Workforce of the future!",
+];
+
+const PDF_URLS = [
+  "https://firebasestorage.googleapis.com/v0/b/rekommender-sai-firebase-prod.appspot.com/o/Accelerate%20Recruitment.pdf?alt=media&token=3b49d0ff-03c2-4884-b430-78a74f639b63",
+  "https://firebasestorage.googleapis.com/v0/b/rekommender-sai-firebase-prod.appspot.com/o/Cognitive%20Hiring%20(5).pdf?alt=media&token=9f5159dd-30e6-46ab-a7d6-bfc9c5506af8",
+  "https://firebasestorage.googleapis.com/v0/b/rekommender-sai-firebase-prod.appspot.com/o/How%20AI%20is%20revolutionising%20candidate%20screening.pdf?alt=media&token=c80d2eaa-0b49-49ab-b769-155a3e36afc5",
+  "https://firebasestorage.googleapis.com/v0/b/rekommender-sai-firebase-prod.appspot.com/o/Workforce%20of%20the%20Future.pdf?alt=media&token=dd016cb3-8021-45f6-90bf-909acd6a45d8",
 ];
 
 // Made with React Quill
@@ -129,7 +116,7 @@ const users = [...Array(12)].map((_, index) => {
   return {
     id: `31a6d8e0-12d4-4aef-88c3-39229ea852f7-${setIndex}`,
     name: faker.name.findName(),
-    avatarUrl: `/static/blog/blog_${setIndex%4}.jpg`
+    avatarUrl: `/static/blog/blog_${setIndex % 4}.jpg`,
   };
 });
 
@@ -146,22 +133,22 @@ const POST_COMMENTS = [
         id: faker.datatype.uuid(),
         userId: users[1].id,
         message: faker.lorem.lines(),
-        postedAt: faker.date.past()
+        postedAt: faker.date.past(),
       },
       {
         id: faker.datatype.uuid(),
         userId: users[0].id,
         message: faker.lorem.lines(),
         tagUser: users[1].name,
-        postedAt: faker.date.past()
+        postedAt: faker.date.past(),
       },
       {
         id: faker.datatype.uuid(),
         userId: users[2].id,
         message: faker.lorem.lines(),
-        postedAt: faker.date.past()
-      }
-    ]
+        postedAt: faker.date.past(),
+      },
+    ],
   },
   {
     id: faker.datatype.uuid(),
@@ -175,21 +162,21 @@ const POST_COMMENTS = [
         id: faker.datatype.uuid(),
         userId: users[5].id,
         message: faker.lorem.lines(),
-        postedAt: faker.date.past()
+        postedAt: faker.date.past(),
       },
       {
         id: faker.datatype.uuid(),
         userId: users[6].id,
         message: faker.lorem.lines(),
-        postedAt: faker.date.past()
+        postedAt: faker.date.past(),
       },
       {
         id: faker.datatype.uuid(),
         userId: users[7].id,
         message: faker.lorem.lines(),
-        postedAt: faker.date.past()
-      }
-    ]
+        postedAt: faker.date.past(),
+      },
+    ],
   },
   {
     id: faker.datatype.uuid(),
@@ -198,7 +185,7 @@ const POST_COMMENTS = [
     message: faker.lorem.lines(),
     postedAt: faker.date.past(),
     users: [],
-    replyComment: []
+    replyComment: [],
   },
   {
     id: faker.datatype.uuid(),
@@ -207,12 +194,12 @@ const POST_COMMENTS = [
     message: faker.lorem.lines(),
     postedAt: faker.date.past(),
     users: [],
-    replyComment: []
-  }
+    replyComment: [],
+  },
 ];
 
-let posts = [...Array(23)].map((_, index) => {
-  const setIndex = index + 1;
+let posts = POST_TITLES.map((_, index) => {
+  const setIndex = index;
   return {
     id: `0feb2990-4210-4170-93a4-37e8f5958a18-${setIndex}`,
     cover: mockImgCover(setIndex),
@@ -225,27 +212,28 @@ let posts = [...Array(23)].map((_, index) => {
     favorite: faker.datatype.number(),
     author: {
       name: faker.name.findName(),
-      avatarUrl: `/static/mock-images/avatars/avatar_${setIndex}.jpg`
+      avatarUrl: `/static/mock-images/avatars/avatar_${setIndex}.jpg`,
     },
-    tags: ['Lamp', 'A man', 'Human', 'Lantern', 'Festival'],
+    tags: ["Lamp", "A man", "Human", "Lantern", "Festival"],
     body: POST_BODY,
     favoritePerson: [...Array(50)].map((_, index) => {
       return {
         name: faker.name.findName(),
-        avatarUrl: `/static/mock-images/avatars/avatar_${index + 1}.jpg`
+        avatarUrl: `/static/mock-images/avatars/avatar_${index + 1}.jpg`,
       };
     }),
-    comments: POST_COMMENTS
+    comments: POST_COMMENTS,
+    pdfUrl: PDF_URLS[index],
   };
 });
 
 // ----------------------------------------------------------------------
 
-mock.onGet('/api/blog/posts/all').reply(200, { posts });
+mock.onGet("/api/blog/posts/all").reply(200, { posts });
 
 // ----------------------------------------------------------------------
 
-mock.onGet('/api/blog/posts').reply((config) => {
+mock.onGet("/api/blog/posts").reply((config) => {
   try {
     const { index, step } = config.params;
     const maxLength = posts.length;
@@ -260,50 +248,52 @@ mock.onGet('/api/blog/posts').reply((config) => {
     return [200, { results, maxLength }];
   } catch (error) {
     console.error(error);
-    return [500, { message: 'Internal server error' }];
+    return [500, { message: "Internal server error" }];
   }
 });
 
 // ----------------------------------------------------------------------
 
-mock.onGet('/api/blog/post').reply((config) => {
+mock.onGet("/api/blog/post").reply((config) => {
   try {
     const { title } = config.params;
     const post = posts.find((_post) => paramCase(_post.title) === title);
 
     if (!post) {
-      return [404, { message: 'Post not found' }];
+      return [404, { message: "Post not found" }];
     }
 
     return [200, { post }];
   } catch (error) {
     console.error(error);
-    return [500, { message: 'Internal server error' }];
+    return [500, { message: "Internal server error" }];
   }
 });
 
 // ----------------------------------------------------------------------
 
-mock.onGet('/api/blog/posts/recent').reply((config) => {
+mock.onGet("/api/blog/posts/recent").reply((config) => {
   try {
     const { title } = config.params;
 
-    const recentPosts = posts.filter((_post) => paramCase(_post.title) !== title).slice(posts.length - 5, posts.length);
+    const recentPosts = posts
+      .filter((_post) => paramCase(_post.title) !== title)
+      .slice(posts.length - 5, posts.length);
 
     if (!recentPosts) {
-      return [404, { message: 'Post not found' }];
+      return [404, { message: "Post not found" }];
     }
 
     return [200, { recentPosts }];
   } catch (error) {
     console.error(error);
-    return [500, { message: 'Internal server error' }];
+    return [500, { message: "Internal server error" }];
   }
 });
 
 // ----------------------------------------------------------------------
 
-mock.onGet('/api/blog/posts/search').reply((config) => {
+mock.onGet("/api/blog/posts/search").reply((config) => {
   try {
     const { query } = config.params;
     const cleanQuery = query.toLowerCase().trim();
@@ -322,6 +312,6 @@ mock.onGet('/api/blog/posts/search').reply((config) => {
     return [200, { results }];
   } catch (error) {
     console.error(error);
-    return [500, { message: 'Internal server error' }];
+    return [500, { message: "Internal server error" }];
   }
 });

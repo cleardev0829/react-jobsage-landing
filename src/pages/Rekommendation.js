@@ -2,9 +2,7 @@
 import { experimentalStyled as styled } from "@material-ui/core/styles";
 // components
 import Page from "../components/Page";
-import {
-  ContactUs,
-} from "../components/_external-pages/about";
+import { ContactUs } from "../components/_external-pages/about";
 import { PostItem } from "src/components/_external-pages/landing";
 
 // ----------------------------------------------------------------------
@@ -26,16 +24,16 @@ const data = {
       },
     ],
     imageUrl: "/static/rekommendation/rekommendation.svg",
-    buttonTitle: 'Try now',
+    buttonTitle: "Try now",
     direction: true,
-    link: 'https://irekommend.com'
-  },  
+    link: "https://irekommend.com",
+  },
 };
 // ----------------------------------------------------------------------
 
 export default function Rekommendation() {
   return (
-    <RootStyle title="About us | Minimal-UI">    
+    <RootStyle title="About us | Minimal-UI">
       <PostItem {...data.item} />
       <ContactUs />
     </RootStyle>
