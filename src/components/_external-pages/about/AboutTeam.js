@@ -95,7 +95,7 @@ export default function AboutTeam() {
 
   const settings = {
     speed: 500,
-    slidesToShow: 4,
+    slidesToShow: 3,
     centerMode: true,
     centerPadding: "0 80px",
     rtl: Boolean(theme.direction === "rtl"),
