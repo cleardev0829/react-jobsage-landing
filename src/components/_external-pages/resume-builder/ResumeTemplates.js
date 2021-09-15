@@ -1,4 +1,3 @@
-import faker from "faker";
 import { useRef } from "react";
 import Slider from "react-slick";
 import PropTypes from "prop-types";
@@ -11,83 +10,33 @@ import {
   Button,
   Container,
   Typography,
-  IconButton,
-  Divider,
 } from "@material-ui/core";
 //
-import {
-  varFadeIn,
-  varFadeInUp,
-  MotionInView,
-  varFadeInDown,
-} from "../../animate";
+import { varFadeIn, varFadeInUp, MotionInView } from "../../animate";
 import { CarouselControlsArrowsBasic2 } from "../../carousel";
-
-// ----------------------------------------------------------------------
-
-const MEMBERS = [
-  {
-    name: faker.name.findName(),
-    role: "Head of growth",
-    avatar: "/static/resume-builder/resume_template.svg",
-  },
-  {
-    name: faker.name.findName(),
-    role: "Strategy & Finance Ops",
-    avatar: "/static/resume-builder/resume_template.svg",
-  },
-  {
-    name: faker.name.findName(),
-    role: "Head of AI – blooma.ai",
-    avatar: "/static/resume-builder/resume_template.svg",
-  },
-  {
-    name: faker.name.findName(),
-    role: "Product Leader – Facebook (APIs)",
-    avatar: "/static/resume-builder/resume_template.svg",
-  },
-  {
-    name: faker.name.findName(),
-    role: "People-Operations - Google",
-    avatar: "/static/resume-builder/resume_template.svg",
-  },
-  {
-    name: faker.name.findName(),
-    role: "Global Head of People",
-    avatar: "/static/resume-builder/resume_template.svg",
-  },
-];
-
-// ----------------------------------------------------------------------
+import { templates } from "./templates";
 
 ResumeCard.propTypes = {
   member: PropTypes.object,
 };
 
 function ResumeCard({ member }) {
-  const { name, avatar } = member;
+  const { name, image, url } = member;
   return (
-    // <Card key={name} sx={{mx: 1.5 }}>
-    // <Box component="img" src={avatar} sx={{ width: "100%", borderRadius: 1 }} />
-    // </Card>
-
     <Card key={name} sx={{ p: 1, mx: 1.5 }}>
       <Typography variant="subtitle1" sx={{ mt: 2, mb: 0.5 }}>
         {name}
       </Typography>
       <Box
         component="img"
-        src={avatar}
+        src={image}
         sx={{ width: "100%", borderRadius: 1.5 }}
       />
       <Box sx={{ mt: 1, mb: 1 }}>
         <Button
           variant="contained"
           onClick={() => {
-            window.open(
-              "https://firebasestorage.googleapis.com/v0/b/rekommender-sai-firebase-prod.appspot.com/o/Business_Development.pdf?alt=media&token=4f725277-f070-42b7-aae0-2f9fe2e74631",
-              "_blank"
-            );
+            window.open(url, "_blank");
           }}
         >
           Use this template
@@ -158,7 +107,7 @@ export default function ResumeTemplates() {
 
       <Box sx={{ position: "relative" }}>
         <Slider ref={carouselRef} {...settings}>
-          {MEMBERS.map((member) => (
+          {templates.map((member) => (
             <MotionInView key={member.name} variants={varFadeIn}>
               <ResumeCard key={member.name} member={member} />
             </MotionInView>

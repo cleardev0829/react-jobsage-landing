@@ -19,11 +19,6 @@ const menuConfig = [
     icon: <Icon icon={homeFill} {...ICON_SIZE} />,
     path: "/",
   },
-  // {
-  //   title: 'Upload resume',
-  //   icon: <Icon icon={roundGrain} {...ICON_SIZE} />,
-  //   path: PATH_PAGE.resumeUpload
-  // },
   {
     title: "Resume builder",
     icon: <Icon icon={bookOpenFill} {...ICON_SIZE} />,
@@ -38,32 +33,31 @@ const menuConfig = [
         subheader: "Company",
         items: [
           { title: "About us", path: PATH_PAGE.about },
-          // { title: 'Blog', path: PATH_PAGE.blog},
           { title: "Privacy Policy", path: PATH_PAGE.privacyPolicy },
           { title: "Terms and Conditions", path: PATH_PAGE.termsConditions },
         ],
       },
     ],
   },
-  {
-    title: "Features",
-    path: "/Features",
-    icon: <Icon icon={featureOpenFill} {...ICON_SIZE} />,
-    children: [
-      {
-        subheader: "Feature",
-        items: [
-          {
-            title: "Recruitment Solution",
-            path: PATH_PAGE.recruitmentSolution,
-          },
-          { title: "Resume Parsing", path: PATH_PAGE.resumeParsing },
-          { title: "Candidate Sourcing", path: PATH_PAGE.candidateSourcing },
-          { title: "Rekommendation", path: PATH_PAGE.rekommendation },
-        ],
-      },
-    ],
-  },
+  // {
+  //   title: "Features",
+  //   path: "/Features",
+  //   icon: <Icon icon={featureOpenFill} {...ICON_SIZE} />,
+  //   children: [
+  //     {
+  //       subheader: "Feature",
+  //       items: [
+  //         {
+  //           title: "Recruitment Solution",
+  //           path: PATH_PAGE.recruitmentSolution,
+  //         },
+  //         { title: "Resume Parsing", path: PATH_PAGE.resumeParsing },
+  //         { title: "Candidate Sourcing", path: PATH_PAGE.candidateSourcing },
+  //         { title: "Rekommendation", path: PATH_PAGE.rekommendation },
+  //       ],
+  //     },
+  //   ],
+  // },
 ];
 
 export default menuConfig;

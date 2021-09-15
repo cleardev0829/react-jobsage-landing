@@ -23,7 +23,7 @@ const ContentStyle = styled("div")(({ theme }) => ({
 const data = {
   reimagine: {
     prefix: "Reimagine",
-    suffix: "Recruitement",
+    suffix: "Recruitment",
     description: [
       {
         suffix:

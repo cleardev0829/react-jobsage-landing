@@ -55,8 +55,7 @@ export default function LandingReimagine() {
             <ContentStyle>
               <MotionInView variants={varFadeInUp}>
                 <Typography variant="h3">
-                  Reimagine{" "}
-                  <span style={{ fontWeight: 400 }}>Recruitement</span>
+                  Reimagine <span style={{ fontWeight: 400 }}>Recruitment</span>
                 </Typography>
                 <MHidden width="mdDown">
                   <Divider color="primary" sx={{ width: 70, my: 4 }} />

@@ -1,30 +1,36 @@
-import { Link as RouterLink } from 'react-router-dom';
+import { Link as RouterLink } from "react-router-dom";
 // material
-import { alpha, useTheme, experimentalStyled as styled } from '@material-ui/core/styles';
-import { Box, Grid, Button, Container, Typography } from '@material-ui/core';
+import {
+  alpha,
+  useTheme,
+  experimentalStyled as styled,
+} from "@material-ui/core/styles";
+import { Box, Grid, Button, Container, Typography } from "@material-ui/core";
 // routes
-import { PATH_PAGE } from '../../../routes/paths';
+import { PATH_PAGE } from "../../../routes/paths";
 //
-import { varFadeInUp, MotionInView } from '../../animate';
+import { varFadeInUp, MotionInView } from "../../animate";
 
 // ----------------------------------------------------------------------
 
-const RootStyle = styled('div')(({ theme }) => ({
+const RootStyle = styled("div")(({ theme }) => ({
   padding: theme.spacing(24, 0),
   backgroundImage:
-    theme.palette.mode === 'light'
-      ? `linear-gradient(180deg, ${alpha(theme.palette.grey[300], 0)} 0%, ${theme.palette.grey[300]} 100%)`
-      : 'none'
+    theme.palette.mode === "light"
+      ? `linear-gradient(180deg, ${alpha(theme.palette.grey[300], 0)} 0%, ${
+          theme.palette.grey[300]
+        } 100%)`
+      : "none",
 }));
 
-const ContentStyle = styled('div')(({ theme }) => ({
-  width: '100%',
-  textAlign: 'center',
+const ContentStyle = styled("div")(({ theme }) => ({
+  width: "100%",
+  textAlign: "center",
   marginBottom: theme.spacing(10),
-  [theme.breakpoints.up('md')]: {
-    textAlign: 'left',
-    marginBottom: 0
-  }
+  [theme.breakpoints.up("md")]: {
+    textAlign: "left",
+    marginBottom: 0,
+  },
 }));
 
 const ScreenStyle = styled(MotionInView)(({ theme }) => ({
@@ -32,18 +38,19 @@ const ScreenStyle = styled(MotionInView)(({ theme }) => ({
   paddingBottom: 1,
   maxWidth: 160,
   borderRadius: 8,
-  backgroundColor: theme.palette.grey[theme.palette.mode === 'light' ? 300 : 800],
-  [theme.breakpoints.up('sm')]: {
+  backgroundColor:
+    theme.palette.grey[theme.palette.mode === "light" ? 300 : 800],
+  [theme.breakpoints.up("sm")]: {
     maxWidth: 320,
     paddingRight: 4,
-    borderRadius: 12
+    borderRadius: 12,
   },
-  '& img': {
+  "& img": {
     borderRadius: 8,
-    [theme.breakpoints.up('sm')]: {
-      borderRadius: 12
-    }
-  }
+    [theme.breakpoints.up("sm")]: {
+      borderRadius: 12,
+    },
+  },
 }));
 
 const COMMON = {
@@ -53,28 +60,28 @@ const COMMON = {
   scaleY: 1,
   translateX: 0,
   translateY: 0,
-  opacity: 0
+  opacity: 0,
 };
 
 const variantScreenLeft = {
   initial: COMMON,
-  animate: { ...COMMON, translateX: '-50%', translateY: 40, opacity: 1 }
+  animate: { ...COMMON, translateX: "-50%", translateY: 40, opacity: 1 },
 };
 const variantScreenCenter = {
   initial: COMMON,
-  animate: { ...COMMON, opacity: 1 }
+  animate: { ...COMMON, opacity: 1 },
 };
 const variantScreenRight = {
   initial: COMMON,
-  animate: { ...COMMON, translateX: '50%', translateY: -40, opacity: 1 }
+  animate: { ...COMMON, translateX: "50%", translateY: -40, opacity: 1 },
 };
 
 // ----------------------------------------------------------------------
 
 export default function LandingHugePackElements() {
   const theme = useTheme();
-  const isLight = theme.palette.mode === 'light';
-  const isRTL = theme.direction === 'rtl';
+  const isLight = theme.palette.mode === "light";
+  const isRTL = theme.direction === "rtl";
 
   const screenLeftAnimate = variantScreenLeft;
   const screenCenterAnimate = variantScreenCenter;
@@ -84,11 +91,16 @@ export default function LandingHugePackElements() {
     <RootStyle>
       <Container maxWidth="lg">
         <Grid container spacing={5} justifyContent="center">
-          <Grid item xs={12} md={6} sx={{ display: 'flex', alignItems: 'center' }}>
+          <Grid
+            item
+            xs={12}
+            md={6}
+            sx={{ display: "flex", alignItems: "center" }}
+          >
             <ContentStyle>
               <MotionInView variants={varFadeInUp}>
                 <Typography sx={{ fontSize: 40 }} variant="h2" sx={{ mb: 3 }}>
-                  Reimagine <span style={{ fontWeight: 200 }}>Recruitement</span>
+                  Reimagine <span style={{ fontWeight: 200 }}>Recruitment</span>
                 </Typography>
               </MotionInView>
 
@@ -96,20 +108,18 @@ export default function LandingHugePackElements() {
                 <Typography
                   sx={{
                     mb: 5,
-                    color: isLight ? 'text.secondary' : 'common.white',
-                    fontSize: 20
+                    color: isLight ? "text.secondary" : "common.white",
+                    fontSize: 20,
                   }}
                 >
-                  IRekommend is an end-to-end recruitment solution which reimagines  the way  you recruit Right side Pic : Use Manatal Pic with a variation
+                  IRekommend is an end-to-end recruitment solution which
+                  reimagines the way you recruit Right side Pic : Use Manatal
+                  Pic with a variation
                 </Typography>
               </MotionInView>
 
               <MotionInView variants={varFadeInUp}>
-                <Button
-                  size="large"
-                  color="primary"
-                  variant="contained"
-                >
+                <Button size="large" color="primary" variant="contained">
                   Start your free trial
                 </Button>
               </MotionInView>
@@ -119,17 +129,14 @@ export default function LandingHugePackElements() {
           <Grid item xs={12} md={6} dir="ltr">
             <Box
               sx={{
-                display: 'flex',
-                alignItems: 'center',
-                position: 'relative',
-                justifyContent: 'center'
+                display: "flex",
+                alignItems: "center",
+                position: "relative",
+                justifyContent: "center",
               }}
             >
               <MotionInView variants={varFadeInUp}>
-                <img
-                  alt={`screen`}
-                  src={`/static/home/first.svg`}
-                />
+                <img alt={`screen`} src={`/static/home/first.svg`} />
               </MotionInView>
             </Box>
           </Grid>
