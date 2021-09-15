@@ -1,10 +1,10 @@
 export const templates = [
-  {
-    name: "Business_Development",
-    url:
-      "https://firebasestorage.googleapis.com/v0/b/rekommender-sai-firebase-prod.appspot.com/o/Business_Development.pdf?alt=media&token=284731e3-4538-4955-b824-627f100146a8",
-    image: "/static/resume-builder/resume_template.svg",
-  },
+  // {
+  //   name: "Business_Development",
+  //   url:
+  //     "https://firebasestorage.googleapis.com/v0/b/rekommender-sai-firebase-prod.appspot.com/o/Business_Development.pdf?alt=media&token=284731e3-4538-4955-b824-627f100146a8",
+  //   image: "/static/resume-builder/resume_template.svg",
+  // },
   {
     name: "Data Scientists",
     url:
@@ -17,18 +17,18 @@ export const templates = [
       "https://firebasestorage.googleapis.com/v0/b/rekommender-sai-firebase-prod.appspot.com/o/Data_Engineer.pdf?alt=media&token=4353523a-9c60-4a01-b3ab-ab979abdcb73",
     image: "/static/resume-builder/resume_template.svg",
   },
-  {
-    name: "Dynamic -3",
-    url:
-      "https://firebasestorage.googleapis.com/v0/b/rekommender-sai-firebase-prod.appspot.com/o/Dynamic%20-3.pdf?alt=media&token=4ef242bf-fd6f-4fd4-bfdb-497e89c9f33d",
-    image: "/static/resume-builder/resume_template.svg",
-  },
-  {
-    name: "Dynamic 5",
-    url:
-      "https://firebasestorage.googleapis.com/v0/b/rekommender-sai-firebase-prod.appspot.com/o/Dynamic%205.pdf?alt=media&token=ab1fd4b5-e909-415c-be3a-d2f7cbaeeb4d",
-    image: "/static/resume-builder/resume_template.svg",
-  },
+  // {
+  //   name: "Dynamic -3",
+  //   url:
+  //     "https://firebasestorage.googleapis.com/v0/b/rekommender-sai-firebase-prod.appspot.com/o/Dynamic%20-3.pdf?alt=media&token=4ef242bf-fd6f-4fd4-bfdb-497e89c9f33d",
+  //   image: "/static/resume-builder/resume_template.svg",
+  // },
+  // {
+  //   name: "Dynamic 5",
+  //   url:
+  //     "https://firebasestorage.googleapis.com/v0/b/rekommender-sai-firebase-prod.appspot.com/o/Dynamic%205.pdf?alt=media&token=ab1fd4b5-e909-415c-be3a-d2f7cbaeeb4d",
+  //   image: "/static/resume-builder/resume_template.svg",
+  // },
   {
     name: "Dynamic",
     url:
@@ -77,42 +77,42 @@ export const templates = [
       "https://firebasestorage.googleapis.com/v0/b/rekommender-sai-firebase-prod.appspot.com/o/Dynamic-9.pdf?alt=media&token=ce5358c1-d1d7-4c34-acf6-0531e2bd73fd",
     image: "/static/resume-builder/resume_template.svg",
   },
-  {
-    name: "Executive -1",
-    url:
-      "https://firebasestorage.googleapis.com/v0/b/rekommender-sai-firebase-prod.appspot.com/o/Executive%20-1.pdf?alt=media&token=957644ee-5536-4d5b-8b0e-046739a6bba0",
-    image: "/static/resume-builder/resume_template.svg",
-  },
-  {
-    name: "Executive -2",
-    url:
-      "https://firebasestorage.googleapis.com/v0/b/rekommender-sai-firebase-prod.appspot.com/o/Executive%20-2.pdf?alt=media&token=7176ba52-fbea-4473-8a67-e87ed47459a1",
-    image: "/static/resume-builder/resume_template.svg",
-  },
-  {
-    name: "Fresher-1",
-    url:
-      "https://firebasestorage.googleapis.com/v0/b/rekommender-sai-firebase-prod.appspot.com/o/Fresher-1.pdf?alt=media&token=cff473dc-55ad-4400-816a-dae638b5350b",
-    image: "/static/resume-builder/resume_template.svg",
-  },
-  {
-    name: "Fresher-2",
-    url:
-      "https://firebasestorage.googleapis.com/v0/b/rekommender-sai-firebase-prod.appspot.com/o/Fresher-2.pdf?alt=media&token=604521bf-cfa7-4c0b-9d46-094cfadf714d",
-    image: "/static/resume-builder/resume_template.svg",
-  },
-  {
-    name: "Hybrid -1",
-    url:
-      "https://firebasestorage.googleapis.com/v0/b/rekommender-sai-firebase-prod.appspot.com/o/Hybrid%20-1.pdf?alt=media&token=0a2165c2-611b-4554-b0a4-1854cb019874",
-    image: "/static/resume-builder/resume_template.svg",
-  },
-  {
-    name: "Hybrid-2",
-    url:
-      "https://firebasestorage.googleapis.com/v0/b/rekommender-sai-firebase-prod.appspot.com/o/Hybrid-2.pdf?alt=media&token=5472a313-2be4-4585-b611-c2541b0a1a88",
-    image: "/static/resume-builder/resume_template.svg",
-  },
+  // {
+  //   name: "Executive -1",
+  //   url:
+  //     "https://firebasestorage.googleapis.com/v0/b/rekommender-sai-firebase-prod.appspot.com/o/Executive%20-1.pdf?alt=media&token=957644ee-5536-4d5b-8b0e-046739a6bba0",
+  //   image: "/static/resume-builder/resume_template.svg",
+  // },
+  // {
+  //   name: "Executive -2",
+  //   url:
+  //     "https://firebasestorage.googleapis.com/v0/b/rekommender-sai-firebase-prod.appspot.com/o/Executive%20-2.pdf?alt=media&token=7176ba52-fbea-4473-8a67-e87ed47459a1",
+  //   image: "/static/resume-builder/resume_template.svg",
+  // },
+  // {
+  //   name: "Fresher-1",
+  //   url:
+  //     "https://firebasestorage.googleapis.com/v0/b/rekommender-sai-firebase-prod.appspot.com/o/Fresher-1.pdf?alt=media&token=cff473dc-55ad-4400-816a-dae638b5350b",
+  //   image: "/static/resume-builder/resume_template.svg",
+  // },
+  // {
+  //   name: "Fresher-2",
+  //   url:
+  //     "https://firebasestorage.googleapis.com/v0/b/rekommender-sai-firebase-prod.appspot.com/o/Fresher-2.pdf?alt=media&token=604521bf-cfa7-4c0b-9d46-094cfadf714d",
+  //   image: "/static/resume-builder/resume_template.svg",
+  // },
+  // {
+  //   name: "Hybrid -1",
+  //   url:
+  //     "https://firebasestorage.googleapis.com/v0/b/rekommender-sai-firebase-prod.appspot.com/o/Hybrid%20-1.pdf?alt=media&token=0a2165c2-611b-4554-b0a4-1854cb019874",
+  //   image: "/static/resume-builder/resume_template.svg",
+  // },
+  // {
+  //   name: "Hybrid-2",
+  //   url:
+  //     "https://firebasestorage.googleapis.com/v0/b/rekommender-sai-firebase-prod.appspot.com/o/Hybrid-2.pdf?alt=media&token=5472a313-2be4-4585-b611-c2541b0a1a88",
+  //   image: "/static/resume-builder/resume_template.svg",
+  // },
   {
     name: "Management",
     url:

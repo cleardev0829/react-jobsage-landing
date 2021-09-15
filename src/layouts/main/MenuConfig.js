@@ -33,6 +33,7 @@ const menuConfig = [
         subheader: "Company",
         items: [
           { title: "About us", path: PATH_PAGE.about },
+          { title: "Blog", path: PATH_PAGE.blog },
           { title: "Privacy Policy", path: PATH_PAGE.privacyPolicy },
           { title: "Terms and Conditions", path: PATH_PAGE.termsConditions },
         ],

@@ -88,14 +88,14 @@ const data = {
 
 export default function LandingPage() {
   return (
-    <RootStyle title="This is JobSage landing page | Minimal-UI" id="move_top">
+    <RootStyle title="This is IRekommend website | Minimal-UI" id="move_top">
       <LandingHero />
       <ContentStyle>
         <PostItem {...data.reimagine} />
         <PostItem {...data.our} />
         <PostItem {...data.candidate} />
         <PostItem {...data.resume} />
-        <PostItem {...data.founder} />
+        {/* <PostItem {...data.founder} /> */}
         <AboutTeam />
         {/* <ContactUsWithMap /> */}
       </ContentStyle>

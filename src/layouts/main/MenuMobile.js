@@ -222,7 +222,7 @@ export default function MenuMobile({ isOffset, isHome }) {
             ))}
           </List>
 
-          <Stack
+          {/* <Stack
             spacing={2}
             sx={{ margin: "0px 20px" }}
             direction={{ xs: "column", md: "row" }}
@@ -253,7 +253,7 @@ export default function MenuMobile({ isOffset, isHome }) {
             >
               Free Trial
             </Button>
-          </Stack>
+          </Stack> */}
         </Scrollbar>
       </Drawer>
     </>

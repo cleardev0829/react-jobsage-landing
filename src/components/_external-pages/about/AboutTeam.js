@@ -32,45 +32,35 @@ import { MHidden } from "../../@material-extend";
 // ----------------------------------------------------------------------
 
 const MEMBERS = [
-  // {
-  //   name: 'Veeraraghavan Devanathan',
-  //   role: "Head of growth",
-  //   avatar: "/static/about/advisor-1.svg",
-  // },
-  // {
-  //   name: 'Dipankar Adhikari Head',
-  //   role: "Strategy & Finance Ops",
-  //   avatar: "/static/about/testimonials-2.png",
-  // },
   {
-    name: 'Philomena Lamoureux',
+    name: "Philomena Lamoureux",
     role: "(Advisor) Head of AI – blooma.ai",
-    avatar: "/static/about/testimonials-3.png",
+    avatar: "/static/about/Philomena.jpg",
   },
   {
-    name: 'Antony Arul',
+    name: "Antony Arul",
     role: "(Advisor) Product Leader – Facebook (APIs)",
-    avatar: "/static/about/testimonials-4.png",
+    avatar: "/static/about/Antony.jpg",
   },
   {
-    name: 'Ellen Sun',
-    role: "(Advisor) People-Operations - Google",
-    avatar: "/static/about/testimonials-5.png",
-  },
-  // {
-  //   name: 'Ashish Pant',
-  //   role: "Global Head of People Analytics, Novartis",
-  //   avatar: "/static/about/testimonials-6.png",
-  // },
-  {
-    name: 'Philomena Lamoureux',
-    role: "(Advisor) Head of AI – blooma.ai",
-    avatar: "/static/about/testimonials-7.png",
-  },
-  {
-    name: 'Sudeep Nagar',
+    name: "Sudeep Nagar",
     role: "Vice President, Sales & Operations – Bluestone",
-    avatar: "/static/about/testimonials-6.png",
+    avatar: "/static/about/Sudeep.jpg",
+  },
+  {
+    name: "Philomena Lamoureux",
+    role: "(Advisor) Head of AI – blooma.ai",
+    avatar: "/static/about/Philomena.jpg",
+  },
+  {
+    name: "Antony Arul",
+    role: "(Advisor) Product Leader – Facebook (APIs)",
+    avatar: "/static/about/Antony.jpg",
+  },
+  {
+    name: "Sudeep Nagar",
+    role: "Vice President, Sales & Operations – Bluestone",
+    avatar: "/static/about/Sudeep.jpg",
   },
 ];
 
@@ -134,12 +124,12 @@ export default function AboutTeam() {
   };
 
   return (
-    <Container maxWidth="lg" sx={{ pt:8, pb: 4, textAlign: "center" }}>     
+    <Container maxWidth="lg" sx={{ pt: 8, pb: 4, textAlign: "center" }}>
       <MotionInView variants={varFadeInUp}>
-        <Typography variant="h3" color='primary'>
+        <Typography variant="h3" color="primary">
           {`Our `}
           <span style={{ fontWeight: 400 }}>Advisors</span>
-        </Typography>        
+        </Typography>
       </MotionInView>
 
       <Box sx={{ position: "relative", mt: 8 }}>
@@ -155,7 +145,7 @@ export default function AboutTeam() {
           onPrevious={handlePrevious}
           sx={{ transform: "translateY(-64px)" }}
         />
-      </Box>       
+      </Box>
     </Container>
   );
 }

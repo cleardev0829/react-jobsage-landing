@@ -1,11 +1,7 @@
 // material
 import { experimentalStyled as styled } from "@material-ui/core/styles";
-import { Divider } from "@material-ui/core";
 // components
 import Page from "../components/Page";
-import {
-  ContactUs,
-} from "../components/_external-pages/about";
 import { PostItem } from "src/components/_external-pages/landing";
 import { ResumeTemplates } from "src/components/_external-pages/resume-builder";
 
@@ -34,7 +30,7 @@ export default function ResumeBuilder() {
         buttonTitle="Build your Resume"
         imageUrl="/static/resume-builder/resume.png"
         direction={true}
-      />   
+      />
       <ResumeTemplates />
     </RootStyle>
   );
