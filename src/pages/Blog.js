@@ -2,13 +2,7 @@ import { orderBy } from "lodash";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { useEffect, useCallback, useState } from "react";
 // material
-import {
-  Box,
-  Grid,
-  Skeleton,
-  Container,
-  Stack,
-} from "@material-ui/core";
+import { Box, Grid, Skeleton, Container, Stack } from "@material-ui/core";
 import { experimentalStyled as styled } from "@material-ui/core/styles";
 import { useDispatch, useSelector } from "../redux/store";
 import { getPostsInitial, getMorePosts } from "../redux/slices/blog";
@@ -75,7 +69,7 @@ const RootStyle = styled(Page)(({ theme }) => ({
 export default function BlogPosts() {
   const dispatch = useDispatch();
   const [filters, setFilters] = useState("latest");
-  const { posts, hasMore, index, step } = useSelector((state) => state.blog); console.log('=============================================', posts)
+  const { posts, hasMore, index, step } = useSelector((state) => state.blog);
   const sortedPosts = applySort(posts, filters);
   const onScroll = useCallback(() => dispatch(getMorePosts()), [dispatch]);
 
@@ -89,7 +83,7 @@ export default function BlogPosts() {
 
   return (
     <RootStyle>
-      <Container sx={{my: 8}}>
+      <Container sx={{ my: 8 }}>
         <Stack
           mb={5}
           direction="row"
